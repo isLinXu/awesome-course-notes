@@ -1,4 +1,4 @@
-# 论文阅读清单
+# week1
 ```{toctree}
 :maxdepth: 2
 ```

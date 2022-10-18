@@ -1,4 +1,4 @@
-# CourseNotes
+# AwesomeCourseNotes
 
 ---
 
