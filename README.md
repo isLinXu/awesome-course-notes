@@ -1,1 +1,1 @@
-# paddle-course-note
+# Awesome-Course-Note
