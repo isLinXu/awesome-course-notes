@@ -1,15 +1,10 @@
-# course-list
+# course-list-en
 
 ```{toctree}
 :maxdepth: 3
 ```
 
-## [内容](https://deep-learning-drizzle.github.io/index.html#contents)
-
-
 [TOC]
-
-
 
 ------
 ## 1.Deep Learning (Deep Neural Networks)

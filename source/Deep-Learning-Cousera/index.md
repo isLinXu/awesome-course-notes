@@ -2,6 +2,7 @@
 
 ```{toctree}
 :maxdepth: 3
-courese_list.md
+courese_list_en.md
+courese_list_zh.md
 ```
 
