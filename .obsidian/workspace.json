@@ -1,0 +1,176 @@
+{
+  "main": {
+    "id": "e208971797383e24",
+    "type": "split",
+    "children": [
+      {
+        "id": "308779a6a6d84d15",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d4623b122ae46106",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "0086fe4b792dede2",
+    "type": "split",
+    "children": [
+      {
+        "id": "69180f096bea54d6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9d8f4918a2d22193",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "af1b21b7cbd20559",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "980f79a90d1084ef",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "935707578b3c86de",
+    "type": "split",
+    "children": [
+      {
+        "id": "f3adb150af6ec2e2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "305fc5a60c97581e",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "50abc96ba4df77c8",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "63446ddcc8830f5e",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "aeb08ced57c928bc",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "d4623b122ae46106",
+  "lastOpenFiles": [
+    "docs/Deep-Learning-Cousera/courese_list.html",
+    "docs/Deep-Learning-Cousera/week1/index.html",
+    "docs/Deep-Learning-Cousera/week1",
+    "docs/Deep-Learning-Cousera/index.html",
+    "docs/_static/sbt-webpack-macros.html",
+    "docs/_static/vendor/fontawesome/6.5.1/webfonts/fa-v4compatibility.woff2",
+    "docs/_static/vendor/fontawesome/6.5.1/webfonts/fa-v4compatibility.ttf",
+    "docs/_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2",
+    "docs/_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.ttf",
+    "docs/_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2",
+    "docs/_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.ttf",
+    "docs/_static/logo.png",
+    "docs/_static/minus.png",
+    "docs/_static/panda.png",
+    "docs/_static/file.png",
+    "docs/_static/images/logo_jupyterhub.svg",
+    "docs/_static/images/logo_deepnote.svg",
+    "docs/_static/images/logo_colab.png",
+    "docs/_static/images/logo_binder.svg",
+    "docs/_static/plus.png",
+    "docs/_sources/Deep-Learning-Cousera/week1/index.md",
+    "docs/_sources/Deep-Learning-Cousera/index.md",
+    "docs/_sources/Deep-Learning-Cousera/courese_list.md",
+    "docs/_sources/index.md",
+    "source/Deep-Learning-Cousera/courese_list~.md",
+    "build/html/_sources/Deep-Learning-Cousera/courese_list.md",
+    "source/Deep-Learning-Cousera/courese_list.md",
+    "source/Deep-Learning-Cousera/index_副本.md",
+    "build/html/_sources/Deep-Learning-Cousera/week1/index.md",
+    "build/html/_sources/Deep-Learning-Cousera/index.md",
+    "build/html/_sources/index.md",
+    "build/html/_static/images/logo_jupyterhub.svg"
+  ]
+}
