@@ -1,0 +1,740 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Lecture3 &#8212; 课程学习笔记</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css?v=7f9a90b1" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=40d2fe7a"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cs25/03';</script>
+    <link rel="icon" href="../_static/panda.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Lecture4" href="04.html" />
+    <link rel="prev" title="Lecture2" href="02.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="课程学习笔记 - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="课程学习笔记 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">目录</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Deep-Learning-Cousera/index.html">Deep-Learning-Cousera</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Deep-Learning-Cousera/courese_list_en.html">course-list-en</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Deep-Learning-Cousera/courese_list_zh.html">course-list-zh</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../C%26C%2B%2B/index.html">C/C++：从基础语法到优化策略</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/1.Introduction.html">1.Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/2.Getting-Started.html">2.Getting-Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/3.Data-Types-and-Arithmetic-Operators.html">3.Data-Types-and-Arithmetic-Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/4.Loops-and-Branching-Statements.html">4.Loops-and-Branching-Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/5.Data-Structures.html">5.Data-Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/6.Memory-and-Pointer.html">6.Memory-and-Pointer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/7.Basics-of-Functions.html">7.Basics-of-Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/8.Advances-in-Functions.html">8.Advances-in-Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/9.Speedup-Your-Program.html">9.Speedup-Your-Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/10.Code-Optimization.html">10.Code-Optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/11.Basics-of-Classes.html">11.Basics-of-Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/12.Advances-in-Classes.html">12.Advances-in-Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/13.Dynamic-Memory-Management-in-Classes.html">13.Dynamic-Memory-Management-in-Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/14.Class-Inheritance.html">14.Class-Inheritance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/15.Class-Templates-and-std-Library.html">15.Class-Templates-and-std-Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/16.Error-Handling.html">16.Error-Handling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/17.Nested-Classes-and-RTTI.html">17.Nested-Classes-and-RTTI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/18.Interview-with-Vadim-Pisarevsky-on-class-cv-MatinOpenCV.html">18.Interview-with-Vadim-Pisarevsky-on-class-cv-MatinOpenCV</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">cs25</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="01.html">Lecture1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02.html">Lecture2</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Lecture3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.html">Lecture4</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/isLinXu/awesome-course-notes" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/isLinXu/awesome-course-notes/edit/main/cs25/03.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/isLinXu/awesome-course-notes/issues/new?title=Issue%20on%20page%20%2Fcs25/03.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/cs25/03.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Lecture3</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1. 语言模型的简史</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2. 重要的语言模型发布</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rlhf">3. 强化学习与人类反馈（RLHF）</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">4. RLHF的重要性</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">5. 讲座概览</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">6. 模型对齐的定义</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">7. 开放指令调整模型的首次出现</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">8. 模型对齐的资源</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vicuna-rlhf">9. 稳定Vicuna：第一个RLHF模型</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qloraguanaco">10. QLoRA和Guanaco</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">11. 评估与期望</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">12. 评估工具的建立</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">13. RLHF的工作方式</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">14. 偏好（奖励）建模</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dpo">15. 直接偏好优化（DPO）</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dporl-pporeinforce">16. DPO与RL（PPO、REINFORCE等）</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rlhf-zephyr-tulu-2">17. RLHF阶段：Zephyr β和Tulu 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rlhf-steerlmstarling">18. RLHF阶段：SteerLM和Starling</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">19. 当代生态系统</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">20. 当前方向</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">21. 开放对齐发生的地方</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">课程笔记总结</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="lecture3">
+<h1>Lecture3<a class="headerlink" href="#lecture3" title="Link to this heading">#</a></h1>
+<p>这份PPT是关于如何对大型开放语言模型（LLM）进行对齐（Aligning）的讨论，由Nathan Lambert在斯坦福大学的CS25课程中进行。以下是对PPT内容的详细解释和分析，以及相应的课程笔记。</p>
+<section id="id1">
+<h2>1. 语言模型的简史<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>起点</strong>：1948年，Claude Shannon对英语进行了建模。</p></li>
+<li><p><strong>发展</strong>：从1948年到2017年，语言模型逐渐发展。</p></li>
+<li><p><strong>变革</strong>：2017年，Transformer模型的诞生标志着语言模型的一个重要转折点。</p></li>
+</ul>
+</section>
+<section id="id2">
+<h2>2. 重要的语言模型发布<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>2018年</strong>：发布了GPT-1、ELMo和BERT等模型。</p></li>
+<li><p><strong>2019年</strong>：GPT-2模型和规模法则（scaling laws）的提出。</p></li>
+<li><p><strong>2020年</strong>：GPT-3模型展示了令人惊讶的能力，同时也伴随着一些风险。</p></li>
+<li><p><strong>2021年</strong>：提出了“Stochastic parrots”（随机鹦鹉）的概念，指的是语言模型可能随机生成不准确的信息。</p></li>
+<li><p><strong>2022年</strong>：发布了ChatGPT模型。</p></li>
+</ul>
+</section>
+<section id="rlhf">
+<h2>3. 强化学习与人类反馈（RLHF）<a class="headerlink" href="#rlhf" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>必要性</strong>：RLHF对于ChatGPT等模型似乎是必要的，但不是充分的。</p></li>
+<li><p><strong>应用</strong>：RLHF在多个流行模型中是一个关键因素，包括ChatGPT、Bard/Gemini、Claude、Llama 2等。</p></li>
+</ul>
+</section>
+<section id="id3">
+<h2>4. RLHF的重要性<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>文献</strong>：提到了2023年的一篇关于“Constitutional AI”的论文，强调了从AI反馈中获得无害性的重要性。</p></li>
+</ul>
+</section>
+<section id="id4">
+<h2>5. 讲座概览<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>资源</strong>：提供了一个集合和二维码，供听众跟随讲座内容。</p></li>
+<li><p><strong>内容</strong>：讲座内容分为几个章节，包括启动、指令调整的兴起、评估与期望、RLHF的工作方式、扩展等。</p></li>
+</ul>
+</section>
+<section id="id5">
+<h2>6. 模型对齐的定义<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>指令微调</strong>：训练模型以遵循使用指令。</p></li>
+<li><p><strong>监督微调</strong>：训练模型学习特定任务的能力。</p></li>
+<li><p><strong>对齐</strong>：训练模型以反映用户需求的一般概念。</p></li>
+<li><p><strong>偏好微调</strong>：使用标记的偏好数据对语言模型进行微调。</p></li>
+</ul>
+</section>
+<section id="id6">
+<h2>7. 开放指令调整模型的首次出现<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Alpaca</strong>：2023年3月13日发布，使用了52k自指令风格的数据。</p></li>
+<li><p><strong>Vicuna</strong>：2023年3月30日发布，微调了来自ShareGPT的ChatGPT数据。</p></li>
+<li><p><strong>Koala</strong>：2023年4月3日发布，使用了多样化的数据集并进行了人类评估。</p></li>
+</ul>
+</section>
+<section id="id7">
+<h2>8. 模型对齐的资源<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>ShareGPT数据</strong>：来自ChatGPT对话分享工具的数据。</p></li>
+<li><p><strong>OpenAssistant</strong>：第一个开放的、人类指令数据集，广泛用于未来模型的训练。</p></li>
+</ul>
+</section>
+<section id="vicuna-rlhf">
+<h2>9. 稳定Vicuna：第一个RLHF模型<a class="headerlink" href="#vicuna-rlhf" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>训练</strong>：使用接近策略优化（PPO）在流行数据集上进行训练。</p></li>
+</ul>
+</section>
+<section id="qloraguanaco">
+<h2>10. QLoRA和Guanaco<a class="headerlink" href="#qloraguanaco" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>LoRA</strong>：低秩适应，一种微调模型的工具，减少内存消耗。</p></li>
+<li><p><strong>QLoRA</strong>：LoRA加上量化的基础模型，进一步减少微调时的内存消耗。</p></li>
+</ul>
+</section>
+<section id="id8">
+<h2>11. 评估与期望<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>LoRA方法</strong>：探讨了LoRA方法与RL的结合是否有效。</p></li>
+<li><p><strong>Llama 2聊天</strong>：讨论了聊天模型是否应该是“安全的”。</p></li>
+</ul>
+</section>
+<section id="id9">
+<h2>12. 评估工具的建立<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>ChatBotArena</strong>：比较两个不同模型的偏好收集工具。</p></li>
+<li><p><strong>AlpacaEval</strong>：LLM作为评委，对候选模型响应与基线模型完成情况进行比较。</p></li>
+<li><p><strong>MT Bench</strong>：LLM作为评委，对模型响应进行评分。</p></li>
+</ul>
+</section>
+<section id="id10">
+<h2>13. RLHF的工作方式<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>π</strong>：LLM策略。</p></li>
+<li><p><strong>πθ</strong>：基础LLM。</p></li>
+<li><p><strong>x</strong>：提示。</p></li>
+<li><p><strong>y</strong>：完成。</p></li>
+</ul>
+</section>
+<section id="id11">
+<h2>14. 偏好（奖励）建模<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>关键思想</strong>：通过成对偏好而不是单一评分来收集偏好。</p></li>
+</ul>
+</section>
+<section id="dpo">
+<h2>15. 直接偏好优化（DPO）<a class="headerlink" href="#dpo" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>发布</strong>：2023年5月29日发布，是一种简单的优化方法。</p></li>
+</ul>
+</section>
+<section id="dporl-pporeinforce">
+<h2>16. DPO与RL（PPO、REINFORCE等）<a class="headerlink" href="#dporl-pporeinforce" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>差异</strong>：DPO与PPO是非常不同的优化器。</p></li>
+</ul>
+</section>
+<section id="rlhf-zephyr-tulu-2">
+<h2>17. RLHF阶段：Zephyr β和Tulu 2<a class="headerlink" href="#rlhf-zephyr-tulu-2" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Zephyr β</strong>：第一个使用DPO引起关注模型。</p></li>
+<li><p><strong>Tulu 2</strong>：第一个将DPO扩展到700亿参数的模型。</p></li>
+</ul>
+</section>
+<section id="rlhf-steerlmstarling">
+<h2>18. RLHF阶段：SteerLM和Starling<a class="headerlink" href="#rlhf-steerlmstarling" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>SteerLM</strong>：属性条件微调。</p></li>
+<li><p><strong>Starling</strong>：引入了新的偏好数据集和k-wise奖励模型损失函数。</p></li>
+</ul>
+</section>
+<section id="id12">
+<h2>19. 当代生态系统<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>多样性</strong>：模型和参与者的多样性。</p></li>
+</ul>
+</section>
+<section id="id13">
+<h2>20. 当前方向<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>数据</strong>：对偏好数据集的需求。</p></li>
+<li><p><strong>DPO改进</strong>：对DPO方法的持续改进。</p></li>
+<li><p><strong>模型大小</strong>：扩展不同参数规模的模型。</p></li>
+<li><p><strong>特定评估</strong>：获取比ChatBotArena更具体的评估方法。</p></li>
+<li><p><strong>个性化</strong>：本地模型背后的一个主要动机。</p></li>
+</ul>
+</section>
+<section id="id14">
+<h2>21. 开放对齐发生的地方<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>AI2</strong>：Tulu模型、OLMo-Adapt、数据集发布。</p></li>
+<li><p><strong>HuggingFaceH4</strong>：新基础模型的快速发布。</p></li>
+<li><p><strong>Berkeley-Nest/Nexusflow</strong>：Nectar数据集/Starling模型。</p></li>
+<li><p><strong>NousResearch</strong>：Hermes微调模型、数据集等。</p></li>
+</ul>
+</section>
+<section id="id15">
+<h2>课程笔记总结<a class="headerlink" href="#id15" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>语言模型历史</strong>：了解语言模型的发展历程，特别是Transformer模型的诞生。</p></li>
+<li><p><strong>RLHF</strong>：认识到RLHF在当前流行模型中的重要性。</p></li>
+<li><p><strong>模型对齐</strong>：学习如何通过指令微调、监督微调和偏好微调来对齐模型。</p></li>
+<li><p><strong>开放指令调整模型</strong>：了解Alpaca、Vicuna和Koala等模型的特点和发布时间。</p></li>
+<li><p><strong>评估工具</strong>：掌握ChatBotArena、AlpacaEval和MT Bench等评估工具的使用。</p></li>
+<li><p><strong>RLHF的工作方式</strong>：理解RLHF的目标和优化“奖励”的方法。</p></li>
+<li><p><strong>偏好建模</strong>：学习如何通过成对偏好来收集和建模偏好。</p></li>
+<li><p><strong>DPO</strong>：了解直接偏好优化的实现和它与RL方法的区别。</p></li>
+<li><p><strong>RLHF阶段</strong>：跟踪Zephyr β和Tulu 2等模型的发展。</p></li>
+<li><p><strong>生态系统</strong>：注意模型和参与者的多样性。</p></li>
+<li><p><strong>当前方向</strong>：关注数据集的需求、DPO的改进、模型大小的扩展和特定评估方法的发展。</p></li>
+</ul>
+<p>这份PPT提供了对大型开放语言模型对齐的全面了解，包括它们的历史、关键技术、评估工具和当前研究方向。通过这些课程笔记，学习者可以更好地理解如何对语言模型进行对齐，以及这个领域的最新进展。</p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="02.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Lecture2</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="04.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Lecture4</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1. 语言模型的简史</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2. 重要的语言模型发布</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rlhf">3. 强化学习与人类反馈（RLHF）</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">4. RLHF的重要性</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">5. 讲座概览</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">6. 模型对齐的定义</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">7. 开放指令调整模型的首次出现</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">8. 模型对齐的资源</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vicuna-rlhf">9. 稳定Vicuna：第一个RLHF模型</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qloraguanaco">10. QLoRA和Guanaco</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">11. 评估与期望</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">12. 评估工具的建立</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">13. RLHF的工作方式</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">14. 偏好（奖励）建模</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dpo">15. 直接偏好优化（DPO）</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dporl-pporeinforce">16. DPO与RL（PPO、REINFORCE等）</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rlhf-zephyr-tulu-2">17. RLHF阶段：Zephyr β和Tulu 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rlhf-steerlmstarling">18. RLHF阶段：SteerLM和Starling</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">19. 当代生态系统</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">20. 当前方向</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">21. 开放对齐发生的地方</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">课程笔记总结</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By isLinXu
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022, isLinXu.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

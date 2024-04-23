@@ -1,0 +1,680 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Lecture6 &#8212; 课程学习笔记</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css?v=7f9a90b1" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=40d2fe7a"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cs329/06';</script>
+    <link rel="icon" href="../_static/panda.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Lecture7" href="07.html" />
+    <link rel="prev" title="Lecture5" href="05.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="课程学习笔记 - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="课程学习笔记 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">目录</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Deep-Learning-Cousera/index.html">Deep-Learning-Cousera</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Deep-Learning-Cousera/courese_list_en.html">course-list-en</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Deep-Learning-Cousera/courese_list_zh.html">course-list-zh</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../C%26C%2B%2B/index.html">C/C++：从基础语法到优化策略</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/1.Introduction.html">1.Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/2.Getting-Started.html">2.Getting-Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/3.Data-Types-and-Arithmetic-Operators.html">3.Data-Types-and-Arithmetic-Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/4.Loops-and-Branching-Statements.html">4.Loops-and-Branching-Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/5.Data-Structures.html">5.Data-Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/6.Memory-and-Pointer.html">6.Memory-and-Pointer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/7.Basics-of-Functions.html">7.Basics-of-Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/8.Advances-in-Functions.html">8.Advances-in-Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/9.Speedup-Your-Program.html">9.Speedup-Your-Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/10.Code-Optimization.html">10.Code-Optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/11.Basics-of-Classes.html">11.Basics-of-Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/12.Advances-in-Classes.html">12.Advances-in-Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/13.Dynamic-Memory-Management-in-Classes.html">13.Dynamic-Memory-Management-in-Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/14.Class-Inheritance.html">14.Class-Inheritance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/15.Class-Templates-and-std-Library.html">15.Class-Templates-and-std-Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/16.Error-Handling.html">16.Error-Handling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/17.Nested-Classes-and-RTTI.html">17.Nested-Classes-and-RTTI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/18.Interview-with-Vadim-Pisarevsky-on-class-cv-MatinOpenCV.html">18.Interview-with-Vadim-Pisarevsky-on-class-cv-MatinOpenCV</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../cs25/index.html">cs25</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cs25/01.html">Lecture1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs25/02.html">Lecture2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs25/03.html">Lecture3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs25/04.html">Lecture4</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../cs197/index.html">cs197</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/01.html">Lecture1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/02.html">Lecture2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/03.html">Lecture3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/04.html">Lecture4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/05.html">Lecture5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/06.html">Lecture6&amp;7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/07.html">Lecture8&amp;9</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/08.html">Lecture10&amp;11</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/09.html">Lecture12&amp;13</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/10.html">Lecture14&amp;15</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/11.html">Lecture16&amp;17</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/12.html">Lecture18</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/13.html">Lecture19</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/14.html">Lecture20</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/15.html">Lecture21</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">cs329</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="01.html">Lecture1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02.html">Lecture2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03.html">Lecture3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.html">Lecture4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.html">Lecture5</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Lecture6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07.html">Lecture7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html">Lecture8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09.html">Lecture9</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html">Lecture10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html">Lecture11</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html">Lecture12</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/isLinXu/awesome-course-notes" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/isLinXu/awesome-course-notes/edit/main/cs329/06.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/isLinXu/awesome-course-notes/issues/new?title=Issue%20on%20page%20%2Fcs329/06.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/cs329/06.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Lecture6</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1. 课程回顾</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#llm-for-x">2. “LLM for X”项目的关键步骤</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">3. 项目示例：改进作业评分</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">4. 项目示例：总结医生笔记</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">5. 可靠性和可信度的更多信息</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">6. 教育项目方向示例</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">7. 安全项目方向示例</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">8. 医疗保健项目方向示例</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">9. 数据集建议</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">10. 学生兴趣和前瞻性思考</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">课程笔记总结</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="lecture6">
+<h1>Lecture6<a class="headerlink" href="#lecture6" title="Link to this heading">#</a></h1>
+<p>这份PPT是关于大型语言模型（LLM）在不同领域（教育、安全、医疗保健）应用的项目设计和规划的讨论，由Ankur Taly、John Mitchell和Anupam Datta在斯坦福大学的CS329T课程中进行。以下是对PPT内容的详细解释和分析，以及相应的课程笔记。</p>
+<section id="id1">
+<h2>1. 课程回顾<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>教育</strong>：LLM用于个性化辅导、评分、教师协助。</p></li>
+<li><p><strong>安全</strong>：LLM在安全领域的应用，包括防御（模糊测试、代码分析、反编译）和攻击（鱼叉式网络钓鱼、利用漏洞的代码制作）。</p></li>
+<li><p><strong>医疗保健</strong>：LLM用于从电子健康记录（EHR）中提取结构化数据、医学编码、搜索和问答。</p></li>
+</ul>
+</section>
+<section id="llm-for-x">
+<h2>2. “LLM for X”项目的关键步骤<a class="headerlink" href="#llm-for-x" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>框架任务</strong>：定义应用、所需功能、输入输出。</p></li>
+<li><p><strong>提示/调整模型</strong>：设计提示、包含少量样本示例、微调权重。</p></li>
+<li><p><strong>评估模型</strong>：收集评估数据集、定义一组度量标准。</p></li>
+<li><p><strong>评估可靠性和可信度</strong>：确保响应始终基于知识来源、量化响应的不确定性/置信度、理解模型生成响应的方式、评估模型对对抗性提示的鲁棒性。</p></li>
+</ul>
+</section>
+<section id="id2">
+<h2>3. 项目示例：改进作业评分<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>框架任务</strong>：创建一个工具，根据评分标准对作业或考试问题进行评分。</p></li>
+<li><p><strong>提示/调整模型</strong>：基于LLM对程序错误的解释，尝试生成有用的评论。</p></li>
+<li><p><strong>评估模型</strong>：收集评估数据集，定义生成任务的度量标准。</p></li>
+<li><p><strong>评估可靠性和可信度</strong>：解释评分和评论的原因，模型对其评分的确定性，以及模型对错误解决方案的鲁棒性。</p></li>
+</ul>
+</section>
+<section id="id3">
+<h2>4. 项目示例：总结医生笔记<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>框架任务</strong>：创建一个工具，全面且忠实地总结医生的笔记。</p></li>
+<li><p><strong>提示/调整模型</strong>：编写提示描述任务，包括几个示例以便模型理解预期的输出形式。</p></li>
+<li><p><strong>评估模型</strong>：收集评估数据集，定义一组度量标准，如识别特征的精确度和召回率。</p></li>
+<li><p><strong>评估可靠性和可信度</strong>：确保摘要中的每个特征都在笔记中有所体现，理解模型为何选择特定的特征，以及模型对笔记中信息顺序变化的鲁棒性。</p></li>
+</ul>
+</section>
+<section id="id4">
+<h2>5. 可靠性和可信度的更多信息<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>基础性</strong>：LLM的响应被认为是基础性的，如果响应中的每个声明都可以归因于权威的知识来源。</p></li>
+<li><p><strong>置信度</strong>：为LLM响应建立置信度/确定性水平，使用校准的数值概率分数。</p></li>
+<li><p><strong>可解释性</strong>：理解/解释/说明模型如何得出响应，追踪响应到提示的部分或训练/微调集。</p></li>
+<li><p><strong>鲁棒性</strong>：检查模型对对抗性输入的鲁棒性，设计欺骗模型的对抗性输入，设计减轻对抗性输入的缓解措施。</p></li>
+</ul>
+</section>
+<section id="id5">
+<h2>6. 教育项目方向示例<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Clara</strong>：Google文档的写作助手。</p></li>
+<li><p><strong>Bruno</strong>：对话转录工具，用于LLM分析。</p></li>
+<li><p><strong>编码错误消息解释</strong>。</p></li>
+<li><p><strong>对比案例</strong>：设计为教师工具，探讨是否适用于学生。</p></li>
+</ul>
+</section>
+<section id="id6">
+<h2>7. 安全项目方向示例<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>LLM用于模糊测试/错误发现</strong>。</p></li>
+<li><p><strong>LLM用于攻击其他模型、软件（或人员）</strong>。</p></li>
+<li><p><strong>评估LLM的鲁棒性</strong>：攻击技术破坏对齐，防御技术检测对抗性提示。</p></li>
+<li><p><strong>检测文本是否由LLM生成</strong>：水印、检查LLM概率函数的结构。</p></li>
+</ul>
+</section>
+<section id="id7">
+<h2>8. 医疗保健项目方向示例<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>从叙述文本中提取结构化数据</strong>：例如，从笔记中提取计费代码；从叙述中提取症状。</p></li>
+<li><p><strong>从结构化数据生成叙述文本</strong>。</p></li>
+<li><p><strong>从非叙述（成像、信号等）生成报告</strong>。</p></li>
+<li><p><strong>问答</strong>。</p></li>
+</ul>
+</section>
+<section id="id8">
+<h2>9. 数据集建议<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>临床试验匹配</strong>：所有FDA临床试验资格标准均可在线获取。</p></li>
+<li><p><strong>MIMIC</strong>：大量的去标识化结构化和非结构化临床数据集。</p></li>
+<li><p><strong>PMC患者</strong>：从PubMed病例报告中提取的患者摘要。</p></li>
+<li><p><strong>不良药物事件语料库</strong>：从一组临床笔记中提取所有不良药物事件。</p></li>
+</ul>
+</section>
+<section id="id9">
+<h2>10. 学生兴趣和前瞻性思考<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Aman Kansal</strong>：对LLM在医疗保健、教育和技术领域的应用感兴趣。</p></li>
+<li><p><strong>Pooja Sethi</strong>：对视觉+LLM的交叉以及多语言模型感兴趣。</p></li>
+<li><p><strong>Kevin Marx</strong>：专注于医疗诊断，在资源受限的环境中。</p></li>
+<li><p><strong>Jerry Shan</strong>：对LLM在教育技术中的应用感兴趣，特别是与计算机科学教育相关的。</p></li>
+</ul>
+</section>
+<section id="id10">
+<h2>课程笔记总结<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>项目设计</strong>：了解如何为特定领域（教育、安全、医疗保健）设计和规划LLM项目。</p></li>
+<li><p><strong>关键步骤</strong>：学习设计LLM项目的关键步骤，包括框架任务、提示/调整模型、评估模型、评估可靠性和可信度。</p></li>
+<li><p><strong>项目示例</strong>：通过改进作业评分和总结医生笔记的示例，了解如何应用LLM解决实际问题。</p></li>
+<li><p><strong>可靠性和可信度</strong>：学习如何评估LLM的可靠性和可信度，包括基础性、置信度、可解释性和鲁棒性。</p></li>
+<li><p><strong>项目方向</strong>：探索教育、安全和医疗保健领域的潜在项目方向。</p></li>
+<li><p><strong>数据集建议</strong>：了解可用于LLM项目的数据集资源。</p></li>
+<li><p><strong>学生兴趣</strong>：了解学生在LLM领域的个人兴趣和潜在的研究或项目方向。</p></li>
+</ul>
+<p>这份PPT提供了对LLM在不同领域应用的项目设计和规划的全面了解，包括关键步骤、评估方法、可靠性和可信度的评估，以及具体的项目方向和数据集资源。通过这些课程笔记，学习者可以更好地理解如何设计和规划LLM项目，以及如何评估和提高LLM的可靠性和可信度。</p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="05.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Lecture5</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="07.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Lecture7</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1. 课程回顾</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#llm-for-x">2. “LLM for X”项目的关键步骤</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">3. 项目示例：改进作业评分</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">4. 项目示例：总结医生笔记</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">5. 可靠性和可信度的更多信息</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">6. 教育项目方向示例</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">7. 安全项目方向示例</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">8. 医疗保健项目方向示例</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">9. 数据集建议</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">10. 学生兴趣和前瞻性思考</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">课程笔记总结</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By isLinXu
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022, isLinXu.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

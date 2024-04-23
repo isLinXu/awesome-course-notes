@@ -1,0 +1,692 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Lecture9 &#8212; 课程学习笔记</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css?v=7f9a90b1" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=40d2fe7a"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cs329/09';</script>
+    <link rel="icon" href="../_static/panda.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Lecture10" href="10.html" />
+    <link rel="prev" title="Lecture8" href="08.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="课程学习笔记 - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="课程学习笔记 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">目录</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Deep-Learning-Cousera/index.html">Deep-Learning-Cousera</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Deep-Learning-Cousera/courese_list_en.html">course-list-en</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Deep-Learning-Cousera/courese_list_zh.html">course-list-zh</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../C%26C%2B%2B/index.html">C/C++：从基础语法到优化策略</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/1.Introduction.html">1.Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/2.Getting-Started.html">2.Getting-Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/3.Data-Types-and-Arithmetic-Operators.html">3.Data-Types-and-Arithmetic-Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/4.Loops-and-Branching-Statements.html">4.Loops-and-Branching-Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/5.Data-Structures.html">5.Data-Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/6.Memory-and-Pointer.html">6.Memory-and-Pointer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/7.Basics-of-Functions.html">7.Basics-of-Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/8.Advances-in-Functions.html">8.Advances-in-Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/9.Speedup-Your-Program.html">9.Speedup-Your-Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/10.Code-Optimization.html">10.Code-Optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/11.Basics-of-Classes.html">11.Basics-of-Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/12.Advances-in-Classes.html">12.Advances-in-Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/13.Dynamic-Memory-Management-in-Classes.html">13.Dynamic-Memory-Management-in-Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/14.Class-Inheritance.html">14.Class-Inheritance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/15.Class-Templates-and-std-Library.html">15.Class-Templates-and-std-Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/16.Error-Handling.html">16.Error-Handling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/17.Nested-Classes-and-RTTI.html">17.Nested-Classes-and-RTTI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/18.Interview-with-Vadim-Pisarevsky-on-class-cv-MatinOpenCV.html">18.Interview-with-Vadim-Pisarevsky-on-class-cv-MatinOpenCV</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../cs25/index.html">cs25</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cs25/01.html">Lecture1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs25/02.html">Lecture2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs25/03.html">Lecture3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs25/04.html">Lecture4</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../cs197/index.html">cs197</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/01.html">Lecture1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/02.html">Lecture2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/03.html">Lecture3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/04.html">Lecture4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/05.html">Lecture5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/06.html">Lecture6&amp;7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/07.html">Lecture8&amp;9</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/08.html">Lecture10&amp;11</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/09.html">Lecture12&amp;13</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/10.html">Lecture14&amp;15</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/11.html">Lecture16&amp;17</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/12.html">Lecture18</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/13.html">Lecture19</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/14.html">Lecture20</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/15.html">Lecture21</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">cs329</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="01.html">Lecture1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02.html">Lecture2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03.html">Lecture3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.html">Lecture4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.html">Lecture5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06.html">Lecture6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07.html">Lecture7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html">Lecture8</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Lecture9</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html">Lecture10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html">Lecture11</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html">Lecture12</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/isLinXu/awesome-course-notes" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/isLinXu/awesome-course-notes/edit/main/cs329/09.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/isLinXu/awesome-course-notes/issues/new?title=Issue%20on%20page%20%2Fcs329/09.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/cs329/09.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Lecture9</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1. 动机</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#llm">2. 解释LLM行为的方法</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">3. 影响函数的概念</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">4. 影响函数的挑战</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">5. 影响函数的可扩展性解决方案</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">6. 影响函数的准确性</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">7. LLM中的影响函数</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">8. 数据过滤和查询批处理</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">9. 影响分布</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">10. 跨语言泛化</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">11. 定位到层和令牌</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">12. 词序问题</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">13. 未来方向</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">课程笔记总结</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="lecture9">
+<h1>Lecture9<a class="headerlink" href="#lecture9" title="Link to this heading">#</a></h1>
+<p>这份PPT是关于如何使用影响函数（Influence Functions）来研究大型语言模型（LLM）的泛化能力的讨论，由Roger Grosse、Juhan Bae、Cem Anil等人在斯坦福大学的CS329T课程中进行。以下是对PPT内容的详细解释和分析，以及相应的课程笔记。</p>
+<section id="id1">
+<h2>1. 动机<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>问题</strong>：如何解释大型语言模型（LLM）出人意料的行为？</p></li>
+<li><p><strong>挑战</strong>：模型的随机性和生成样本的多种可能假设使得直接检查样本来解释行为变得困难。</p></li>
+</ul>
+</section>
+<section id="llm">
+<h2>2. 解释LLM行为的方法<a class="headerlink" href="#llm" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>机制解释性</strong>：自底向上的方法，需要完整解释计算过程，但可能不总是可行。</p></li>
+<li><p><strong>影响函数</strong>：自顶向下的方法，检查训练样本对模型行为的影响。</p></li>
+</ul>
+</section>
+<section id="id2">
+<h2>3. 影响函数的概念<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>统计学中的经典概念</strong>：用于理解添加新训练样本对模型的影响。</p></li>
+<li><p><strong>计算</strong>：使用隐函数定理和链式法则来计算损失函数的变化。</p></li>
+</ul>
+</section>
+<section id="id3">
+<h2>4. 影响函数的挑战<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>概念挑战</strong>：传统影响函数不完全适用于现代神经网络，因为它们假设了模型的可逆性和最优解的存在。</p></li>
+<li><p><strong>可扩展性挑战</strong>：对于大型模型，影响函数的计算涉及到的逆海森矩阵（inverse-Hessian）的维度是模型参数的数量，这使得直接计算变得不可能。</p></li>
+</ul>
+</section>
+<section id="id4">
+<h2>5. 影响函数的可扩展性解决方案<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Kronecker-Factored Approximate Curvature (K-FAC)</strong>：一种用于优化的参数化近似方法，可以扩展到其他任务。</p></li>
+<li><p><strong>Eigenvalue-Corrected K-FAC (EK-FAC)</strong>：一种更健壮的扩展，可以有效地计算大型模型上的影响函数。</p></li>
+</ul>
+</section>
+<section id="id5">
+<h2>6. 影响函数的准确性<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>与Proximal Bregman Response Function (PBRF)的相关性</strong>：PBRF是一种计算成本高昂的基准，用于评估影响函数近似的准确性。</p></li>
+</ul>
+</section>
+<section id="id6">
+<h2>7. LLM中的影响函数<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>目标</strong>：确定哪些训练序列对给定提示和完成的响应有显著影响。</p></li>
+<li><p><strong>计算方法</strong>：首先计算对特定查询的影响，然后计算所有候选训练序列的影响。</p></li>
+</ul>
+</section>
+<section id="id7">
+<h2>8. 数据过滤和查询批处理<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>数据过滤</strong>：使用TF-IDF选择候选训练序列，以减少需要计算梯度的序列数量。</p></li>
+<li><p><strong>查询批处理</strong>：通过预先计算训练梯度并重用它们，避免对每个查询重复计算。</p></li>
+</ul>
+</section>
+<section id="id8">
+<h2>9. 影响分布<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>模型大小</strong>：随着模型大小的增加，泛化模式变得更加复杂和抽象。</p></li>
+</ul>
+</section>
+<section id="id9">
+<h2>10. 跨语言泛化<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>现象</strong>：LLM在不同语言之间展现出泛化能力。</p></li>
+</ul>
+</section>
+<section id="id10">
+<h2>11. 定位到层和令牌<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>技术</strong>：可以将影响归因于个体令牌和层。</p></li>
+<li><p><strong>令牌级影响</strong>：通过测量与该令牌相关的梯度项来影响损失。</p></li>
+</ul>
+</section>
+<section id="id11">
+<h2>12. 词序问题<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>观察</strong>：LLM对词序的敏感性。</p></li>
+<li><p><strong>实验操作</strong>：通过合成“训练”序列来研究泛化模式。</p></li>
+</ul>
+</section>
+<section id="id12">
+<h2>13. 未来方向<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>影响函数</strong>：分析LLM中的高级认知现象。</p></li>
+<li><p><strong>自我概念</strong>：AI在训练集中的描述是否形成AI助手自我概念的核心部分？</p></li>
+<li><p><strong>表示定位</strong>：使用影响函数来定位真理/虚假等的表示。</p></li>
+<li><p><strong>预训练与微调的交互</strong>：微调的泛化模式受优化器隐含偏差的支配，这种偏差来自于预训练期间学习的关联。</p></li>
+</ul>
+</section>
+<section id="id13">
+<h2>课程笔记总结<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>LLM行为解释</strong>：了解如何使用影响函数来解释LLM的意外行为。</p></li>
+<li><p><strong>影响函数基础</strong>：学习影响函数的统计学基础和在深度学习中的引入。</p></li>
+<li><p><strong>挑战</strong>：认识到影响函数在现代神经网络中的概念和可扩展性挑战。</p></li>
+<li><p><strong>解决方案</strong>：探索K-FAC和EK-FAC等方法来克服可扩展性挑战。</p></li>
+<li><p><strong>准确性评估</strong>：了解如何通过与PBRF的相关性来评估影响函数的准确性。</p></li>
+<li><p><strong>LLM中的影响</strong>：学习如何确定对LLM响应有显著影响的训练序列。</p></li>
+<li><p><strong>数据过滤和批处理</strong>：了解如何使用这些技术来提高计算效率。</p></li>
+<li><p><strong>影响分布</strong>：观察模型大小对泛化模式的影响。</p></li>
+<li><p><strong>跨语言泛化</strong>：探索LLM在不同语言之间的泛化能力。</p></li>
+<li><p><strong>定位技术</strong>：学习如何将影响归因于个体令牌和层。</p></li>
+<li><p><strong>词序问题</strong>：研究LLM对词序的敏感性及其对泛化的影响。</p></li>
+<li><p><strong>未来方向</strong>：了解影响函数在分析LLM中的高级应用和潜在的研究方向。</p></li>
+</ul>
+<p>这份PPT提供了对使用影响函数分析大型语言模型的全面了解，包括它们的挑战、解决方案、应用和未来研究方向。通过这些课程笔记，学习者可以更好地理解如何使用影响函数来研究和解释LLM的行为。</p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="08.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Lecture8</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="10.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Lecture10</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1. 动机</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#llm">2. 解释LLM行为的方法</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">3. 影响函数的概念</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">4. 影响函数的挑战</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">5. 影响函数的可扩展性解决方案</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">6. 影响函数的准确性</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">7. LLM中的影响函数</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">8. 数据过滤和查询批处理</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">9. 影响分布</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">10. 跨语言泛化</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">11. 定位到层和令牌</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">12. 词序问题</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">13. 未来方向</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">课程笔记总结</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By isLinXu
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022, isLinXu.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

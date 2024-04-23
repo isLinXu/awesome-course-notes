@@ -1,0 +1,971 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Lecture12 &#8212; 课程学习笔记</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css?v=7f9a90b1" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=40d2fe7a"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cs886/12';</script>
+    <link rel="icon" href="../_static/panda.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Lecture11" href="11.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="课程学习笔记 - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="课程学习笔记 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">目录</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Deep-Learning-Cousera/index.html">Deep-Learning-Cousera</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Deep-Learning-Cousera/courese_list_en.html">course-list-en</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Deep-Learning-Cousera/courese_list_zh.html">course-list-zh</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../C%26C%2B%2B/index.html">C/C++：从基础语法到优化策略</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/1.Introduction.html">1.Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/2.Getting-Started.html">2.Getting-Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/3.Data-Types-and-Arithmetic-Operators.html">3.Data-Types-and-Arithmetic-Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/4.Loops-and-Branching-Statements.html">4.Loops-and-Branching-Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/5.Data-Structures.html">5.Data-Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/6.Memory-and-Pointer.html">6.Memory-and-Pointer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/7.Basics-of-Functions.html">7.Basics-of-Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/8.Advances-in-Functions.html">8.Advances-in-Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/9.Speedup-Your-Program.html">9.Speedup-Your-Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/10.Code-Optimization.html">10.Code-Optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/11.Basics-of-Classes.html">11.Basics-of-Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/12.Advances-in-Classes.html">12.Advances-in-Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/13.Dynamic-Memory-Management-in-Classes.html">13.Dynamic-Memory-Management-in-Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/14.Class-Inheritance.html">14.Class-Inheritance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/15.Class-Templates-and-std-Library.html">15.Class-Templates-and-std-Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/16.Error-Handling.html">16.Error-Handling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/17.Nested-Classes-and-RTTI.html">17.Nested-Classes-and-RTTI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/18.Interview-with-Vadim-Pisarevsky-on-class-cv-MatinOpenCV.html">18.Interview-with-Vadim-Pisarevsky-on-class-cv-MatinOpenCV</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../cs25/index.html">cs25</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cs25/01.html">Lecture1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs25/02.html">Lecture2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs25/03.html">Lecture3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs25/04.html">Lecture4</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../cs197/index.html">cs197</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/01.html">Lecture1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/02.html">Lecture2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/03.html">Lecture3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/04.html">Lecture4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/05.html">Lecture5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/06.html">Lecture6&amp;7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/07.html">Lecture8&amp;9</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/08.html">Lecture10&amp;11</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/09.html">Lecture12&amp;13</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/10.html">Lecture14&amp;15</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/11.html">Lecture16&amp;17</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/12.html">Lecture18</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/13.html">Lecture19</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/14.html">Lecture20</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/15.html">Lecture21</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../cs329/index.html">cs329</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/01.html">Lecture1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/02.html">Lecture2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/03.html">Lecture3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/04.html">Lecture4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/05.html">Lecture5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/06.html">Lecture6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/07.html">Lecture7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/08.html">Lecture8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/09.html">Lecture9</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/10.html">Lecture10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/11.html">Lecture11</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/12.html">Lecture12</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">cs886</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="01.html">Lecture1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02.html">Lecture2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03.html">Lecture3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.html">Lecture4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.html">Lecture5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06.html">Lecture6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07.html">Lecture7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html">Lecture8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09.html">Lecture9</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html">Lecture10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html">Lecture11</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Lecture12</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/isLinXu/awesome-course-notes" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/isLinXu/awesome-course-notes/edit/main/cs886/12.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/isLinXu/awesome-course-notes/issues/new?title=Issue%20on%20page%20%2Fcs886/12.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/cs886/12.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Lecture12</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">稀疏化简介</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">传统变换器架构</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">瓶颈问题</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#moe">混合专家（MoE）</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">为什么使用MoE？</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">路由机制</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">MoE的效率</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">实验</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">预训练</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">评估语言模型：困惑度和性能</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">结果</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">扩展规模</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gshard">GShard</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">GShard架构</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">实施GShard</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#xla">XLA编译器</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">数据集和基线</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">模型变体</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">结果</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">训练效率</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">性能</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">内存消耗</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">GShard关键要点</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#colt5-t5">CoLT5：条件长T5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#colt5">CoLT5直觉</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">架构</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">CoLT5条件计算</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">实验：训练</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">实验：数据集</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">结果</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">缩放至极长输入</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">消融研究</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">限制</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">比较</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">量化大型语言模型</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">研究论文</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#llm-int8">LLM.int8()</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">矩阵乘法：前馈层和注意力层</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id33">8位量化：混合精度量化和向量量化</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id34">LLM.int8()结果</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id35">8位优化器通过块量化</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qlora-llm">QLoRA：量化LLM的高效微调</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bitnet-1">BitNet：为大型语言模型扩展1位变换器</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bitnet">BitNet关键创新</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bitnet-bitlinear">BitNet：BitLinear</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id36">BitNet：模型训练</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id37">BitNet：能耗</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id38">BitNet：下游任务结果</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bitnet-fp16">BitNet：与FP16变换器的比较</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id39">BitNet：关键要点</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id40">量化比较表</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="lecture12">
+<h1>Lecture12<a class="headerlink" href="#lecture12" title="Link to this heading">#</a></h1>
+<p>这份PPT是关于压缩和稀疏化大型语言模型（LLM）的课程介绍，由Harrum Noor和Marium Aslam在2024年3月26日为加拿大滑铁卢大学（UWaterloo）的CS886课程准备。以下是对PPT内容的详细解释和分析，以及相应的课程笔记：</p>
+<section id="id1">
+<h2>稀疏化简介<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>稀疏性</strong>：利用条件计算的概念，仅在需要时运行系统的一部分，以提高效率、速度，降低能耗，并生成能力。</p></li>
+</ul>
+</section>
+<section id="id2">
+<h2>传统变换器架构<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>注意力机制</strong>：允许模型考虑输入数据的全部上下文，与传统的序列模型相比是一个巨大的进步。</p></li>
+</ul>
+</section>
+<section id="id3">
+<h2>瓶颈问题<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>随着规模的扩大，变换器需要处理更多数据和复杂问题，导致资源密集和效率低下。</p></li>
+</ul>
+</section>
+<section id="moe">
+<h2>混合专家（MoE）<a class="headerlink" href="#moe" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>用MoE层替换密集的前馈层，通过路由机制决定输入令牌去往哪个专家。</p></li>
+</ul>
+</section>
+<section id="id4">
+<h2>为什么使用MoE？<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>分割模型以执行专门化任务，提高计算效率。</p></li>
+</ul>
+</section>
+<section id="id5">
+<h2>路由机制<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>学习机制，随时间改进，使专家专业化，从而在推理时减少计算量。</p></li>
+</ul>
+</section>
+<section id="id6">
+<h2>MoE的效率<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>MoE与密集模型相比，在计算上更高效，尤其是在领域内评估时。</p></li>
+</ul>
+</section>
+<section id="id7">
+<h2>实验<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>训练与GPT-3大小和架构相似的自回归变换器模型。</p></li>
+</ul>
+</section>
+<section id="id8">
+<h2>预训练<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>使用六个英语语言数据集的并集进行预训练。</p></li>
+</ul>
+</section>
+<section id="id9">
+<h2>评估语言模型：困惑度和性能<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>困惑度：衡量语言模型预测文本的能力。</p></li>
+<li><p>下游任务性能：困惑度低并不一定意味着在实际应用中表现更好。</p></li>
+</ul>
+</section>
+<section id="id10">
+<h2>结果<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>MoE模型在计算成本相当的情况下，无论是在领域内还是领域外数据上，都显示出比密集模型更低的困惑度。</p></li>
+</ul>
+</section>
+<section id="id11">
+<h2>扩展规模<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>神经网络的扩展可以带来显著的质量提升。</p></li>
+</ul>
+</section>
+<section id="gshard">
+<h2>GShard<a class="headerlink" href="#gshard" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>谷歌构建了一个600亿参数的变换器，用于大规模多语言机器翻译。</p></li>
+</ul>
+</section>
+<section id="id12">
+<h2>GShard架构<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>基于SPMD（单程序多数据）并行计算框架。</p></li>
+</ul>
+</section>
+<section id="id13">
+<h2>实施GShard<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>使用注释API添加注释，编译器生成在所有设备上并行执行的单一程序。</p></li>
+</ul>
+</section>
+<section id="xla">
+<h2>XLA编译器<a class="headerlink" href="#xla" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>作为各种机器学习框架的通用后端，处理大型计算的分割和数据通信。</p></li>
+</ul>
+</section>
+<section id="id14">
+<h2>数据集和基线<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>网络规模数据集，包含100种语言的平行文档，用于训练。</p></li>
+</ul>
+</section>
+<section id="id15">
+<h2>模型变体<a class="headerlink" href="#id15" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>探索变换器编码器-解码器堆栈中的层数和每层MoE使用的专家总数。</p></li>
+</ul>
+</section>
+<section id="id16">
+<h2>结果<a class="headerlink" href="#id16" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>更深的模型和更多的专家可以提高所有语言的质量。</p></li>
+</ul>
+</section>
+<section id="id17">
+<h2>训练效率<a class="headerlink" href="#id17" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>更深的模型更样本高效，由于过参数化的加速效应，用更少的样本更快地收敛。</p></li>
+</ul>
+</section>
+<section id="id18">
+<h2>性能<a class="headerlink" href="#id18" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>最大模型（600B）可以在4天内完成训练，达到最佳质量。</p></li>
+</ul>
+</section>
+<section id="id19">
+<h2>内存消耗<a class="headerlink" href="#id19" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>GShard的内存消耗来自复制权重、分布式权重和激活。</p></li>
+</ul>
+</section>
+<section id="id20">
+<h2>GShard关键要点<a class="headerlink" href="#id20" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>SPMD框架用于大规模扩展，提供注释API，使用XLA编译器。</p></li>
+</ul>
+</section>
+<section id="colt5-t5">
+<h2>CoLT5：条件长T5<a class="headerlink" href="#colt5-t5" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>处理长输入的变换器模型，通过条件计算提高效率。</p></li>
+</ul>
+</section>
+<section id="colt5">
+<h2>CoLT5直觉<a class="headerlink" href="#colt5" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>通过结合注意力和前馈层的架构改进，实现长输入的快速处理。</p></li>
+</ul>
+</section>
+<section id="id21">
+<h2>架构<a class="headerlink" href="#id21" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>全注意力与局部注意力的结合。</p></li>
+</ul>
+</section>
+<section id="id22">
+<h2>CoLT5条件计算<a class="headerlink" href="#id22" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>包括路由机制、条件前馈和条件注意力三个组件。</p></li>
+</ul>
+</section>
+<section id="id23">
+<h2>实验：训练<a class="headerlink" href="#id23" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>在C4数据集上预训练，使用不同的批量大小和输入长度。</p></li>
+</ul>
+</section>
+<section id="id24">
+<h2>实验：数据集<a class="headerlink" href="#id24" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>使用不同的数据集进行训练和微调。</p></li>
+</ul>
+</section>
+<section id="id25">
+<h2>结果<a class="headerlink" href="#id25" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>CoLT5在所有版本中每个样本的时间更少，实现了SCROLLS基准测试的最新性能。</p></li>
+</ul>
+</section>
+<section id="id26">
+<h2>缩放至极长输入<a class="headerlink" href="#id26" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>CoLT5有效地扩展到极长输入，比LONGT5具有更强的性能和更快的速度。</p></li>
+</ul>
+</section>
+<section id="id27">
+<h2>消融研究<a class="headerlink" href="#id27" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>CoLT5从动态路由令牌中受益，学习识别重要令牌并为其提供更多的处理能力。</p></li>
+</ul>
+</section>
+<section id="id28">
+<h2>限制<a class="headerlink" href="#id28" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>CoLT5仅在编码器中应用条件计算，专门用于长序列，需要从头开始训练。</p></li>
+</ul>
+</section>
+<section id="id29">
+<h2>比较<a class="headerlink" href="#id29" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>比较了MoE、GShard和CoLT5的不同特征，包括规模、稀疏化技术、专家选择、注意力和专业化。</p></li>
+</ul>
+</section>
+<section id="id30">
+<h2>量化大型语言模型<a class="headerlink" href="#id30" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>讨论了量化的概念、原因和不同技术，如均匀和非均匀量化、动态量化、块量化和混合精度训练。</p></li>
+</ul>
+</section>
+<section id="id31">
+<h2>研究论文<a class="headerlink" href="#id31" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>介绍了几篇关于量化的论文，包括LLM.int8()、8-bit Optimizers via Block-wise Quantization、QLoRA和BitNet。</p></li>
+</ul>
+</section>
+<section id="llm-int8">
+<h2>LLM.int8()<a class="headerlink" href="#llm-int8" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>介绍了一种新的量化方法，用于在不降低性能的情况下，将推理时间减半。</p></li>
+</ul>
+</section>
+<section id="id32">
+<h2>矩阵乘法：前馈层和注意力层<a class="headerlink" href="#id32" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>讨论了矩阵乘法在注意力层和前馈层中的作用。</p></li>
+</ul>
+</section>
+<section id="id33">
+<h2>8位量化：混合精度量化和向量量化<a class="headerlink" href="#id33" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>介绍了如何通过混合精度分解和向量量化来优化矩阵乘法操作。</p></li>
+</ul>
+</section>
+<section id="id34">
+<h2>LLM.int8()结果<a class="headerlink" href="#id34" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>展示了C4困惑度和时间复杂度的结果。</p></li>
+</ul>
+</section>
+<section id="id35">
+<h2>8位优化器通过块量化<a class="headerlink" href="#id35" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>使用8位统计信息来维护32位优化器状态的性能水平。</p></li>
+</ul>
+</section>
+<section id="qlora-llm">
+<h2>QLoRA：量化LLM的高效微调<a class="headerlink" href="#qlora-llm" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>QLoRA通过减少平均内存需求，使得65B参数模型的微调从&gt;780GB GPU内存减少到&lt;48GB。</p></li>
+</ul>
+</section>
+<section id="bitnet-1">
+<h2>BitNet：为大型语言模型扩展1位变换器<a class="headerlink" href="#bitnet-1" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>BitNet通过使用1位权重的变换器架构，为大型语言模型提供了一种可扩展且稳定的解决方案。</p></li>
+</ul>
+</section>
+<section id="bitnet">
+<h2>BitNet关键创新<a class="headerlink" href="#bitnet" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>量化感知训练、优化技术、BitLinear层和模型并行性。</p></li>
+</ul>
+</section>
+<section id="bitnet-bitlinear">
+<h2>BitNet：BitLinear<a class="headerlink" href="#bitnet-bitlinear" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>使用BitLinear层替换nn.Linear层，直接从零开始训练1位权重。</p></li>
+</ul>
+</section>
+<section id="id36">
+<h2>BitNet：模型训练<a class="headerlink" href="#id36" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>使用直通估计器、混合精度训练和大学习率来训练模型。</p></li>
+</ul>
+</section>
+<section id="id37">
+<h2>BitNet：能耗<a class="headerlink" href="#id37" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>与传统变换器相比，BitNet在能耗上的优势。</p></li>
+</ul>
+</section>
+<section id="id38">
+<h2>BitNet：下游任务结果<a class="headerlink" href="#id38" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>BitNet在下游任务上的性能。</p></li>
+</ul>
+</section>
+<section id="bitnet-fp16">
+<h2>BitNet：与FP16变换器的比较<a class="headerlink" href="#bitnet-fp16" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>BitNet与传统全精度变换器的比较。</p></li>
+</ul>
+</section>
+<section id="id39">
+<h2>BitNet：关键要点<a class="headerlink" href="#id39" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>BitNet在大大减少内存和能源需求的同时，实现了与全精度模型相当的性能和任务成果。</p></li>
+</ul>
+</section>
+<section id="id40">
+<h2>量化比较表<a class="headerlink" href="#id40" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>比较了LLM.int8()、8-bit Optimizers、QLoRA和BitNet的不同特征和技术。</p></li>
+</ul>
+<p>这份PPT为学生提供了大型语言模型压缩和稀疏化的全面介绍，包括稀疏性的概念、混合专家模型、GShard架构、CoLT5模型、量化技术以及这些技术如何帮助提高大型语言模型的效率和可扩展性。通过这些笔记，学生可以更好地理解如何通过稀疏化和量化技术来优化大型语言模型，以及这些技术在实际应用中的潜在影响。</p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="11.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Lecture11</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">稀疏化简介</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">传统变换器架构</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">瓶颈问题</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#moe">混合专家（MoE）</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">为什么使用MoE？</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">路由机制</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">MoE的效率</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">实验</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">预训练</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">评估语言模型：困惑度和性能</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">结果</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">扩展规模</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gshard">GShard</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">GShard架构</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">实施GShard</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#xla">XLA编译器</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">数据集和基线</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">模型变体</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">结果</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">训练效率</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">性能</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">内存消耗</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">GShard关键要点</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#colt5-t5">CoLT5：条件长T5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#colt5">CoLT5直觉</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">架构</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">CoLT5条件计算</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">实验：训练</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">实验：数据集</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">结果</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">缩放至极长输入</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">消融研究</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">限制</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">比较</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">量化大型语言模型</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">研究论文</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#llm-int8">LLM.int8()</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">矩阵乘法：前馈层和注意力层</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id33">8位量化：混合精度量化和向量量化</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id34">LLM.int8()结果</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id35">8位优化器通过块量化</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qlora-llm">QLoRA：量化LLM的高效微调</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bitnet-1">BitNet：为大型语言模型扩展1位变换器</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bitnet">BitNet关键创新</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bitnet-bitlinear">BitNet：BitLinear</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id36">BitNet：模型训练</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id37">BitNet：能耗</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id38">BitNet：下游任务结果</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bitnet-fp16">BitNet：与FP16变换器的比较</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id39">BitNet：关键要点</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id40">量化比较表</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By isLinXu
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022, isLinXu.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,752 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Lecture6 &#8212; 课程学习笔记</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css?v=7f9a90b1" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=40d2fe7a"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cs886/06';</script>
+    <link rel="icon" href="../_static/panda.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Lecture7" href="07.html" />
+    <link rel="prev" title="Lecture5" href="05.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="课程学习笔记 - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="课程学习笔记 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">目录</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Deep-Learning-Cousera/index.html">Deep-Learning-Cousera</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Deep-Learning-Cousera/courese_list_en.html">course-list-en</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Deep-Learning-Cousera/courese_list_zh.html">course-list-zh</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../C%26C%2B%2B/index.html">C/C++：从基础语法到优化策略</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/1.Introduction.html">1.Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/2.Getting-Started.html">2.Getting-Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/3.Data-Types-and-Arithmetic-Operators.html">3.Data-Types-and-Arithmetic-Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/4.Loops-and-Branching-Statements.html">4.Loops-and-Branching-Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/5.Data-Structures.html">5.Data-Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/6.Memory-and-Pointer.html">6.Memory-and-Pointer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/7.Basics-of-Functions.html">7.Basics-of-Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/8.Advances-in-Functions.html">8.Advances-in-Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/9.Speedup-Your-Program.html">9.Speedup-Your-Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/10.Code-Optimization.html">10.Code-Optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/11.Basics-of-Classes.html">11.Basics-of-Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/12.Advances-in-Classes.html">12.Advances-in-Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/13.Dynamic-Memory-Management-in-Classes.html">13.Dynamic-Memory-Management-in-Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/14.Class-Inheritance.html">14.Class-Inheritance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/15.Class-Templates-and-std-Library.html">15.Class-Templates-and-std-Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/16.Error-Handling.html">16.Error-Handling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/17.Nested-Classes-and-RTTI.html">17.Nested-Classes-and-RTTI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/18.Interview-with-Vadim-Pisarevsky-on-class-cv-MatinOpenCV.html">18.Interview-with-Vadim-Pisarevsky-on-class-cv-MatinOpenCV</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../cs25/index.html">cs25</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cs25/01.html">Lecture1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs25/02.html">Lecture2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs25/03.html">Lecture3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs25/04.html">Lecture4</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../cs197/index.html">cs197</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/01.html">Lecture1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/02.html">Lecture2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/03.html">Lecture3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/04.html">Lecture4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/05.html">Lecture5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/06.html">Lecture6&amp;7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/07.html">Lecture8&amp;9</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/08.html">Lecture10&amp;11</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/09.html">Lecture12&amp;13</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/10.html">Lecture14&amp;15</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/11.html">Lecture16&amp;17</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/12.html">Lecture18</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/13.html">Lecture19</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/14.html">Lecture20</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/15.html">Lecture21</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../cs329/index.html">cs329</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/01.html">Lecture1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/02.html">Lecture2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/03.html">Lecture3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/04.html">Lecture4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/05.html">Lecture5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/06.html">Lecture6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/07.html">Lecture7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/08.html">Lecture8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/09.html">Lecture9</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/10.html">Lecture10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/11.html">Lecture11</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/12.html">Lecture12</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">cs886</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="01.html">Lecture1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02.html">Lecture2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03.html">Lecture3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.html">Lecture4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.html">Lecture5</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Lecture6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07.html">Lecture7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html">Lecture8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09.html">Lecture9</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html">Lecture10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html">Lecture11</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html">Lecture12</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/isLinXu/awesome-course-notes" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/isLinXu/awesome-course-notes/edit/main/cs886/06.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/isLinXu/awesome-course-notes/issues/new?title=Issue%20on%20page%20%2Fcs886/06.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/cs886/06.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Lecture6</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">参数高效变换器概述</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transfer-learning">转移学习（Transfer Learning）</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adapter-tuning">适配器调整（Adapter Tuning）</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">实验和结果</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lora">LoRA（低秩适应大型语言模型）</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">实验和结果</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">小型语言模型也是少样本学习者</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">实验和结果</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">使预训练语言模型更好地进行少样本学习</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">实验和评估</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">代码资源</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prefix-tuning">前缀调整（Prefix-Tuning）</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prompt-tuning">提示调整（Prompt-Tuning）</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">提示长度</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-context-learning-icl">参数高效微调与上下文学习（In-Context Learning, ICL）</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">参数高效微调的统一视角</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">实验评估</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">结合最佳设计元素</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#peft">PEFT的使用时机</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">🤗 PEFT</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">结语</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="lecture6">
+<h1>Lecture6<a class="headerlink" href="#lecture6" title="Link to this heading">#</a></h1>
+<p>这份PPT是关于参数高效变换器（Parameter-efficient Transformer）的课程介绍，由Ansh Sharma和Manveer Singh Tamber在2024年2月3日为加拿大滑铁卢大学（UWaterloo）的CS886课程准备。以下是对PPT内容的详细解释和分析，以及相应的课程笔记：</p>
+<section id="id1">
+<h2>参数高效变换器概述<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>主题</strong>：探讨了如何在变换器模型中实现参数高效，即用更少的参数达到相似或更好的性能。</p></li>
+</ul>
+</section>
+<section id="transfer-learning">
+<h2>转移学习（Transfer Learning）<a class="headerlink" href="#transfer-learning" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>定义</strong>：将一个任务上训练好的模型用作另一个相关任务的起点。</p></li>
+<li><p><strong>特征基础 vs 微调</strong>：介绍了两种不同的转移学习方法，特征基础方法和微调方法。</p></li>
+</ul>
+</section>
+<section id="adapter-tuning">
+<h2>适配器调整（Adapter Tuning）<a class="headerlink" href="#adapter-tuning" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>架构</strong>：在变换器层中引入适配器模块，以实现参数高效调整。</p></li>
+<li><p><strong>多头注意力</strong>：变换器处理输入数据的主要子层。</p></li>
+<li><p><strong>前馈层</strong>：使用注意力机制处理数据。</p></li>
+<li><p><strong>跳跃连接</strong>：将适配器/前馈层的输出加回到该层（或子层）的原始输入，有助于网络保留早期阶段的信息。</p></li>
+<li><p><strong>层归一化</strong>：对组合输出进行归一化，以稳定学习过程。</p></li>
+</ul>
+</section>
+<section id="id2">
+<h2>实验和结果<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>目标</strong>：构建一个紧凑且可扩展的系统，该系统在多个类似下游任务上表现良好，而不是为每个新任务训练一个全新的模型。</p></li>
+<li><p><strong>GLUE基准</strong>：使用BERT进行26个不同的文本分类任务。</p></li>
+<li><p><strong>SQuAD数据集</strong>：斯坦福问答数据集，包含来自Wikipedia文章的问题-答案对。</p></li>
+</ul>
+</section>
+<section id="lora">
+<h2>LoRA（低秩适应大型语言模型）<a class="headerlink" href="#lora" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>微调大型语言模型（LLMs）</strong>：讨论了微调LLMs的参数高效方法，如适配器模块和前缀调整。</p></li>
+<li><p><strong>固有维度和固有秩</strong>：介绍了两个关键概念，固有维度和固有秩，它们与神经网络的参数复杂度相关。</p></li>
+</ul>
+</section>
+<section id="id3">
+<h2>实验和结果<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>模型比较</strong>：使用RoBERTa、DeBERTa、GPT-2和GPT-3进行比较。</p></li>
+<li><p><strong>基准测试</strong>：包括GLUE基准测试、WikiSQL、SAMSum、E2E NLG挑战和DART。</p></li>
+</ul>
+</section>
+<section id="id4">
+<h2>小型语言模型也是少样本学习者<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>零样本学习 vs 少样本学习</strong>：介绍了两种学习方式，并讨论了它们在不同任务上的应用。</p></li>
+<li><p><strong>PET（Pattern-Exploiting Training）</strong>：利用模式训练来提高小型模型的少样本学习能力。</p></li>
+</ul>
+</section>
+<section id="id5">
+<h2>实验和结果<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>PET</strong>：基于ALBERT的PET在SuperGLUE和FewGLUE基准测试上的表现。</p></li>
+</ul>
+</section>
+<section id="id6">
+<h2>使预训练语言模型更好地进行少样本学习<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>LM-BFF（更好的语言模型少样本微调）</strong>：介绍了基于提示的微调、自动提示生成和带有示例的微调。</p></li>
+</ul>
+</section>
+<section id="id7">
+<h2>实验和评估<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>结果</strong>：展示了这些方法在不同任务上的表现。</p></li>
+</ul>
+</section>
+<section id="id8">
+<h2>代码资源<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>提供了相关的GitHub链接，包括Adapter BERT、LoRA、PET和LM-BFF。</p></li>
+</ul>
+</section>
+<section id="prefix-tuning">
+<h2>前缀调整（Prefix-Tuning）<a class="headerlink" href="#prefix-tuning" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>背景</strong>：讨论了前缀调整的概念及其在注意力机制中的应用。</p></li>
+</ul>
+</section>
+<section id="prompt-tuning">
+<h2>提示调整（Prompt-Tuning）<a class="headerlink" href="#prompt-tuning" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>评估</strong>：使用不同大小的T5-lm-adapt模型在SuperGLUE基准测试上进行评估。</p></li>
+<li><p><strong>初始化提示</strong>：讨论了如何初始化提示，包括随机选择、类标签初始化等。</p></li>
+</ul>
+</section>
+<section id="id9">
+<h2>提示长度<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>观察</strong>：在所有模型中，提示长度超过20个token只会产生边际增益。</p></li>
+</ul>
+</section>
+<section id="in-context-learning-icl">
+<h2>参数高效微调与上下文学习（In-Context Learning, ICL）<a class="headerlink" href="#in-context-learning-icl" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>比较</strong>：讨论了参数高效微调与上下文学习在不同任务上的表现和效率。</p></li>
+</ul>
+</section>
+<section id="id10">
+<h2>参数高效微调的统一视角<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>适配器、LoRA和前缀调整</strong>：探讨了这些方法之间的关系，并提出了统一的理解。</p></li>
+</ul>
+</section>
+<section id="id11">
+<h2>实验评估<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>数据集</strong>：使用了XSum、英语到罗马尼亚语翻译、MNLI和SST2等数据集。</p></li>
+<li><p><strong>模型</strong>：使用了BART-large和RoBERTa-base。</p></li>
+</ul>
+</section>
+<section id="id12">
+<h2>结合最佳设计元素<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>观察</strong>：并行适配器是修改FFN的最佳变体；FFN在更大的参数计数下更好地利用修改；使用前缀调整修改头部注意力可以在只有0.1%参数的情况下实现强大的性能。</p></li>
+</ul>
+</section>
+<section id="peft">
+<h2>PEFT的使用时机<a class="headerlink" href="#peft" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>实证分析</strong>：分析了PEFT技术在大型语言模型（LLMs）中的优势和劣势。</p></li>
+</ul>
+</section>
+<section id="id13">
+<h2>🤗 PEFT<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>HuggingFace PEFT</strong>：支持许多微调方法，并可以与大多数模型一起使用。</p></li>
+</ul>
+</section>
+<section id="id14">
+<h2>结语<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>提问</strong>：课程最后提供了提问环节。</p></li>
+</ul>
+<p>这份PPT为学生提供了参数高效变换器的全面介绍，包括它们的历史、工作原理、架构、以及在不同任务上的应用。通过这些笔记，学生可以更好地理解如何在保持模型性能的同时减少模型的参数数量，这对于资源有限或需要快速部署的场景非常有用。</p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="05.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Lecture5</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="07.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Lecture7</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">参数高效变换器概述</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transfer-learning">转移学习（Transfer Learning）</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adapter-tuning">适配器调整（Adapter Tuning）</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">实验和结果</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lora">LoRA（低秩适应大型语言模型）</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">实验和结果</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">小型语言模型也是少样本学习者</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">实验和结果</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">使预训练语言模型更好地进行少样本学习</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">实验和评估</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">代码资源</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prefix-tuning">前缀调整（Prefix-Tuning）</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prompt-tuning">提示调整（Prompt-Tuning）</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">提示长度</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-context-learning-icl">参数高效微调与上下文学习（In-Context Learning, ICL）</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">参数高效微调的统一视角</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">实验评估</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">结合最佳设计元素</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#peft">PEFT的使用时机</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">🤗 PEFT</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">结语</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By isLinXu
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022, isLinXu.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

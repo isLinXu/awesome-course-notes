@@ -1,0 +1,1055 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Lecture8 &#8212; 课程学习笔记</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css?v=7f9a90b1" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=40d2fe7a"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cs886/08';</script>
+    <link rel="icon" href="../_static/panda.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Lecture9" href="09.html" />
+    <link rel="prev" title="Lecture7" href="07.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="课程学习笔记 - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="课程学习笔记 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">目录</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Deep-Learning-Cousera/index.html">Deep-Learning-Cousera</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Deep-Learning-Cousera/courese_list_en.html">course-list-en</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Deep-Learning-Cousera/courese_list_zh.html">course-list-zh</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../C%26C%2B%2B/index.html">C/C++：从基础语法到优化策略</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/1.Introduction.html">1.Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/2.Getting-Started.html">2.Getting-Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/3.Data-Types-and-Arithmetic-Operators.html">3.Data-Types-and-Arithmetic-Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/4.Loops-and-Branching-Statements.html">4.Loops-and-Branching-Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/5.Data-Structures.html">5.Data-Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/6.Memory-and-Pointer.html">6.Memory-and-Pointer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/7.Basics-of-Functions.html">7.Basics-of-Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/8.Advances-in-Functions.html">8.Advances-in-Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/9.Speedup-Your-Program.html">9.Speedup-Your-Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/10.Code-Optimization.html">10.Code-Optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/11.Basics-of-Classes.html">11.Basics-of-Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/12.Advances-in-Classes.html">12.Advances-in-Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/13.Dynamic-Memory-Management-in-Classes.html">13.Dynamic-Memory-Management-in-Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/14.Class-Inheritance.html">14.Class-Inheritance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/15.Class-Templates-and-std-Library.html">15.Class-Templates-and-std-Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/16.Error-Handling.html">16.Error-Handling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/17.Nested-Classes-and-RTTI.html">17.Nested-Classes-and-RTTI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/18.Interview-with-Vadim-Pisarevsky-on-class-cv-MatinOpenCV.html">18.Interview-with-Vadim-Pisarevsky-on-class-cv-MatinOpenCV</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../cs25/index.html">cs25</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cs25/01.html">Lecture1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs25/02.html">Lecture2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs25/03.html">Lecture3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs25/04.html">Lecture4</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../cs197/index.html">cs197</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/01.html">Lecture1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/02.html">Lecture2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/03.html">Lecture3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/04.html">Lecture4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/05.html">Lecture5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/06.html">Lecture6&amp;7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/07.html">Lecture8&amp;9</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/08.html">Lecture10&amp;11</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/09.html">Lecture12&amp;13</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/10.html">Lecture14&amp;15</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/11.html">Lecture16&amp;17</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/12.html">Lecture18</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/13.html">Lecture19</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/14.html">Lecture20</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/15.html">Lecture21</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../cs329/index.html">cs329</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/01.html">Lecture1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/02.html">Lecture2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/03.html">Lecture3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/04.html">Lecture4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/05.html">Lecture5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/06.html">Lecture6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/07.html">Lecture7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/08.html">Lecture8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/09.html">Lecture9</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/10.html">Lecture10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/11.html">Lecture11</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/12.html">Lecture12</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">cs886</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="01.html">Lecture1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02.html">Lecture2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03.html">Lecture3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.html">Lecture4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.html">Lecture5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06.html">Lecture6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07.html">Lecture7</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Lecture8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09.html">Lecture9</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html">Lecture10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html">Lecture11</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html">Lecture12</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/isLinXu/awesome-course-notes" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/isLinXu/awesome-course-notes/edit/main/cs886/08.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/isLinXu/awesome-course-notes/issues/new?title=Issue%20on%20page%20%2Fcs886/08.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/cs886/08.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Lecture8</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#llm">大型语言模型（LLM）概述</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">LLM与传统机器学习、深度学习的比较</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">自然语言处理任务</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#t5">T5框架</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">T5性能和架构变体</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">T5输入数据</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">T5训练</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">T5无监督目标</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">T5预训练数据集</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">T5性能结果</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">T5扩展</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">T5反思</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">上下文学习</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">语言模型元学习</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gpt-3">GPT-3架构和训练方法</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">GPT-3训练数据集</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">GPT-3计算消耗</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">GPT-3限制</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#codex">CodeX介绍</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">CodeX评估</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">CodeX训练</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">CodeX结果</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">CodeX比较</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#codex-s">CodeX-S</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#codex-d">CodeX-D</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">CodeX限制</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#llama-2">Llama-2介绍</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Llama-2预训练</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Llama-2预训练评估</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#llama-2-chat">Llama 2-Chat</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Llama 2-Chat人类偏好数据收集</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Llama 2-Chat奖励建模</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Llama 2-Chat迭代微调</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#llama-2-chat-ghost-attention-gatt">Llama 2-Chat Ghost Attention (GAtt)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#llama-2-chat-rlhf">Llama 2-Chat RLHF模型评估</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">Llama-2安全性</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mixtral-of-experts-moe">Mixtral of Experts (MoE)介绍</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mistral">Mistral架构</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mixtral-of-experts">稀疏Mixtral of Experts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mixtral">Mixtral结果</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mixtral-instruct">Mixtral-Instruct</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">Mixtral路由分析</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#palm-pathways-language-model">PaLM: Pathways Language Model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#palm">PaLM模型架构</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">PaLM模型规模超参数</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">PaLM训练数据集</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">PaLM训练基础设施</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">PaLM结果</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#palm-big-bench">PaLM: BIG-bench</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">PaLM: 评估推理</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id33">PaLM: 链式思维提示</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id34">PaLM: 链式思维结果</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id35">PaLM: 代码任务</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id36">PaLM: 翻译</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id37">PaLM: 限制</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#llms">LLMs比较</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id38">问题/讨论</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id39">参考文献</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="lecture8">
+<h1>Lecture8<a class="headerlink" href="#lecture8" title="Link to this heading">#</a></h1>
+<p>这份PPT是关于大型语言模型（Large Language Models，简称LLMs）的课程介绍，由Ayinde Yakubu和Jerry Gu在2024年1月17日为加拿大滑铁卢大学（UWaterloo）的CS886课程准备。以下是对PPT内容的详细解释和分析，以及相应的课程笔记：</p>
+<section id="llm">
+<h2>大型语言模型（LLM）概述<a class="headerlink" href="#llm" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>定义</strong>：能够理解和生成人类语言的计算模型。</p></li>
+<li><p><strong>应用</strong>：在大量数据集上训练，用于识别、翻译、预测或生成文本或其他内容。</p></li>
+<li><p><strong>特点</strong>：是无监督的多任务学习者。</p></li>
+</ul>
+</section>
+<section id="id1">
+<h2>LLM与传统机器学习、深度学习的比较<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>训练数据规模</strong>：LLM需要非常大的数据集。</p></li>
+<li><p><strong>特征工程</strong>：LLM自动完成，不需要手动特征工程。</p></li>
+<li><p><strong>模型复杂性</strong>：LLM最为复杂。</p></li>
+<li><p><strong>可解释性</strong>：LLM的可解释性较差。</p></li>
+<li><p><strong>性能</strong>：LLM性能最高。</p></li>
+<li><p><strong>硬件需求</strong>：LLM对硬件的需求非常高。</p></li>
+</ul>
+</section>
+<section id="id2">
+<h2>自然语言处理任务<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>自然语言理解</strong>：情感分析、文本分类、自然语言推理（NLI）、语义理解、推理等。</p></li>
+<li><p><strong>自然语言生成</strong>：摘要、问答等。</p></li>
+</ul>
+</section>
+<section id="t5">
+<h2>T5框架<a class="headerlink" href="#t5" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>统一方法</strong>：将各种任务统一为文本到文本的转换。</p></li>
+<li><p><strong>架构</strong>：使用word2vec生成输入序列中每个标记的数值表示向量。</p></li>
+</ul>
+</section>
+<section id="id3">
+<h2>T5性能和架构变体<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>性能</strong>：在多个基准测试中的表现。</p></li>
+<li><p><strong>架构变体</strong>：不同的注意力掩蔽模式。</p></li>
+</ul>
+</section>
+<section id="id4">
+<h2>T5输入数据<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>数据集</strong>：Colossal Clean Crawled Corpus，每月从网页提取20TB文本数据。</p></li>
+</ul>
+</section>
+<section id="id5">
+<h2>T5训练<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>任务</strong>：所有任务都表述为文本到文本的任务。</p></li>
+<li><p><strong>预训练步骤</strong>：使用最大序列长度512和批量大小128序列。</p></li>
+</ul>
+</section>
+<section id="id6">
+<h2>T5无监督目标<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>机制</strong>：模型通过大量未标记文本数据集学习通用知识。</p></li>
+</ul>
+</section>
+<section id="id7">
+<h2>T5预训练数据集<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>腐败策略</strong>：包括掩蔽、替换跨度、删除和打乱等。</p></li>
+</ul>
+</section>
+<section id="id8">
+<h2>T5性能结果<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>数据集大小</strong>：不同大小的数据集对模型性能的影响。</p></li>
+</ul>
+</section>
+<section id="id9">
+<h2>T5扩展<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>计算能力</strong>：增加计算能力可以提高模型性能。</p></li>
+</ul>
+</section>
+<section id="id10">
+<h2>T5反思<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>文本到文本</strong>：提供了一种简单的方式，使用相同的损失函数和解码程序训练单一模型完成多种任务。</p></li>
+</ul>
+</section>
+<section id="id11">
+<h2>上下文学习<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>限制</strong>：需要大型数据集，但实践中并不总是可行。</p></li>
+</ul>
+</section>
+<section id="id12">
+<h2>语言模型元学习<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>能力</strong>：在训练期间发展广泛的技能和模式识别能力。</p></li>
+</ul>
+</section>
+<section id="gpt-3">
+<h2>GPT-3架构和训练方法<a class="headerlink" href="#gpt-3" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>数据集</strong>：基于原始Common Crawl数据集，最多1T单词。</p></li>
+</ul>
+</section>
+<section id="id13">
+<h2>GPT-3训练数据集<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>清理</strong>：通过多种方式清理原始数据集。</p></li>
+</ul>
+</section>
+<section id="id14">
+<h2>GPT-3计算消耗<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>细节</strong>：模型大小、层数、dmodel、nheads、dhead、批量大小和学习率。</p></li>
+</ul>
+</section>
+<section id="id15">
+<h2>GPT-3限制<a class="headerlink" href="#id15" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>文本合成</strong>：存在结构和算法限制。</p></li>
+<li><p><strong>样本效率</strong>：预训练期间样本效率低下。</p></li>
+<li><p><strong>可解释性</strong>：缺乏可解释性。</p></li>
+<li><p><strong>偏见和不公平</strong>：可能会延续和放大社会中现有的偏见和不公平。</p></li>
+</ul>
+</section>
+<section id="codex">
+<h2>CodeX介绍<a class="headerlink" href="#codex" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>进展</strong>：在从未明确训练过代码的语言模型中生成程序。</p></li>
+</ul>
+</section>
+<section id="id16">
+<h2>CodeX评估<a class="headerlink" href="#id16" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>方法</strong>：使用功能正确性而不是基于匹配的指标。</p></li>
+</ul>
+</section>
+<section id="id17">
+<h2>CodeX训练<a class="headerlink" href="#id17" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>细节</strong>：在GitHub上的159GB独特Python文件数据集上微调GPT模型。</p></li>
+</ul>
+</section>
+<section id="id18">
+<h2>CodeX结果<a class="headerlink" href="#id18" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>测试损失</strong>：在保留的验证集上的交叉熵测试损失遵循幂律。</p></li>
+</ul>
+</section>
+<section id="id19">
+<h2>CodeX比较<a class="headerlink" href="#id19" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>性能</strong>：与其他模型（如GPT-NEO和GPT-J）的比较。</p></li>
+</ul>
+</section>
+<section id="codex-s">
+<h2>CodeX-S<a class="headerlink" href="#codex-s" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>改进</strong>：通过监督微调提高了性能。</p></li>
+</ul>
+</section>
+<section id="codex-d">
+<h2>CodeX-D<a class="headerlink" href="#codex-d" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>生成文档字符串</strong>：从代码生成文档字符串的CodeX版本。</p></li>
+</ul>
+</section>
+<section id="id20">
+<h2>CodeX限制<a class="headerlink" href="#id20" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>训练效率</strong>：训练数据总量达数亿行代码。</p></li>
+</ul>
+</section>
+<section id="llama-2">
+<h2>Llama-2介绍<a class="headerlink" href="#llama-2" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>家族</strong>：具有数十亿参数的预训练和微调LLM。</p></li>
+</ul>
+</section>
+<section id="id21">
+<h2>Llama-2预训练<a class="headerlink" href="#id21" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>架构</strong>：采用标准变换器架构。</p></li>
+</ul>
+</section>
+<section id="id22">
+<h2>Llama-2预训练评估<a class="headerlink" href="#id22" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>基准</strong>：与其他开源模型的比较。</p></li>
+</ul>
+</section>
+<section id="llama-2-chat">
+<h2>Llama 2-Chat<a class="headerlink" href="#llama-2-chat" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>版本</strong>：通过对齐技术进行监督微调的Llama-2版本。</p></li>
+</ul>
+</section>
+<section id="id23">
+<h2>Llama 2-Chat人类偏好数据收集<a class="headerlink" href="#id23" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>反馈</strong>：从人类反馈中获取人类偏好数据。</p></li>
+</ul>
+</section>
+<section id="id24">
+<h2>Llama 2-Chat奖励建模<a class="headerlink" href="#id24" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>模型</strong>：使用人类偏好数据训练奖励模型。</p></li>
+</ul>
+</section>
+<section id="id25">
+<h2>Llama 2-Chat迭代微调<a class="headerlink" href="#id25" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>算法</strong>：使用拒绝采样微调和近端策略优化（PPO）。</p></li>
+</ul>
+</section>
+<section id="llama-2-chat-ghost-attention-gatt">
+<h2>Llama 2-Chat Ghost Attention (GAtt)<a class="headerlink" href="#llama-2-chat-ghost-attention-gatt" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>技术</strong>：帮助控制多轮对话流程。</p></li>
+</ul>
+</section>
+<section id="llama-2-chat-rlhf">
+<h2>Llama 2-Chat RLHF模型评估<a class="headerlink" href="#llama-2-chat-rlhf" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>质量</strong>：在有帮助和安全提示的测试集上评估。</p></li>
+</ul>
+</section>
+<section id="id26">
+<h2>Llama-2安全性<a class="headerlink" href="#id26" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>数据过滤</strong>：在预训练和微调期间过滤有害数据。</p></li>
+</ul>
+</section>
+<section id="mixtral-of-experts-moe">
+<h2>Mixtral of Experts (MoE)介绍<a class="headerlink" href="#mixtral-of-experts-moe" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>模型</strong>：可以胜过Llama-2 70B和GPT3.5的稀疏混合专家模型。</p></li>
+</ul>
+</section>
+<section id="mistral">
+<h2>Mistral架构<a class="headerlink" href="#mistral" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>版本</strong>：Mixtral的早期版本。</p></li>
+</ul>
+</section>
+<section id="mixtral-of-experts">
+<h2>稀疏Mixtral of Experts<a class="headerlink" href="#mixtral-of-experts" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>架构</strong>：与Mistral相同，但具有更长的上下文长度和MoE层。</p></li>
+</ul>
+</section>
+<section id="mixtral">
+<h2>Mixtral结果<a class="headerlink" href="#mixtral" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>基准</strong>：在多个基准测试中与Llama-2的比较。</p></li>
+</ul>
+</section>
+<section id="mixtral-instruct">
+<h2>Mixtral-Instruct<a class="headerlink" href="#mixtral-instruct" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>版本</strong>：在指令数据集上进行监督微调的Mixtral版本。</p></li>
+</ul>
+</section>
+<section id="id27">
+<h2>Mixtral路由分析<a class="headerlink" href="#id27" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>分布</strong>：使用The Pile数据集测量所选专家的分布。</p></li>
+</ul>
+</section>
+<section id="palm-pathways-language-model">
+<h2>PaLM: Pathways Language Model<a class="headerlink" href="#palm-pathways-language-model" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>参数</strong>：训练为具有5400亿参数的密集激活变换器语言模型。</p></li>
+</ul>
+</section>
+<section id="palm">
+<h2>PaLM模型架构<a class="headerlink" href="#palm" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>设置</strong>：仅解码器设置，每个时间步只能关注自身和过去的步骤。</p></li>
+</ul>
+</section>
+<section id="id28">
+<h2>PaLM模型规模超参数<a class="headerlink" href="#id28" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>比较</strong>：比较了不同模型规模的性能。</p></li>
+</ul>
+</section>
+<section id="id29">
+<h2>PaLM训练数据集<a class="headerlink" href="#id29" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>组成</strong>：代表广泛自然语言使用案例的高质量语料库。</p></li>
+</ul>
+</section>
+<section id="id30">
+<h2>PaLM训练基础设施<a class="headerlink" href="#id30" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>TPU</strong>：所有模型都在TPU v4 Pods上训练。</p></li>
+</ul>
+</section>
+<section id="id31">
+<h2>PaLM结果<a class="headerlink" href="#id31" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>基准</strong>：在29个NLP基准测试中的表现。</p></li>
+</ul>
+</section>
+<section id="palm-big-bench">
+<h2>PaLM: BIG-bench<a class="headerlink" href="#palm-big-bench" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>基准</strong>：旨在为LLM产生具有挑战性任务的协作基准。</p></li>
+</ul>
+</section>
+<section id="id32">
+<h2>PaLM: 评估推理<a class="headerlink" href="#id32" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>算术推理</strong>：需要多步逻辑推理的自然语言数学问题。</p></li>
+</ul>
+</section>
+<section id="id33">
+<h2>PaLM: 链式思维提示<a class="headerlink" href="#id33" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>方法</strong>：通过提供解决问题的逐步思维过程来提高模型的推理能力。</p></li>
+</ul>
+</section>
+<section id="id34">
+<h2>PaLM: 链式思维结果<a class="headerlink" href="#id34" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>表现</strong>：在不同任务上的表现。</p></li>
+</ul>
+</section>
+<section id="id35">
+<h2>PaLM: 代码任务<a class="headerlink" href="#id35" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>文本到代码</strong>：根据自然语言描述编写代码。</p></li>
+</ul>
+</section>
+<section id="id36">
+<h2>PaLM: 翻译<a class="headerlink" href="#id36" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>任务</strong>：将一种人类语言重写为另一种语言，同时保留输入的内容、语义和风格。</p></li>
+</ul>
+</section>
+<section id="id37">
+<h2>PaLM: 限制<a class="headerlink" href="#id37" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>偏见</strong>：在底层数据中包含和放大偏见。</p></li>
+</ul>
+</section>
+<section id="llms">
+<h2>LLMs比较<a class="headerlink" href="#llms" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>模型名称</strong>：包括T5、GPT-3、CodeX、Llama-2、Mixtral和PaLM的比较。</p></li>
+</ul>
+</section>
+<section id="id38">
+<h2>问题/讨论<a class="headerlink" href="#id38" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>无监督学习与强化学习</strong>：哪种更可取？</p></li>
+<li><p><strong>LLM的大小</strong>：是什么让语言模型变得“大型”？</p></li>
+<li><p><strong>语言模型的恶意使用</strong>：语言模型是否可以被恶意使用？</p></li>
+<li><p><strong>减少社会伤害</strong>：如何减少语言模型的滥用对社会造成的伤害？</p></li>
+<li><p><strong>消除社会隐含偏见</strong>：如何从基础模型中移除社会隐含偏见？</p></li>
+<li><p><strong>LLMs的突现能力</strong>：是什么导致了在LLMs中观察到的突现能力？</p></li>
+</ul>
+</section>
+<section id="id39">
+<h2>参考文献<a class="headerlink" href="#id39" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>引用</strong>：列出了用于准备PPT的学术资源。</p></li>
+</ul>
+<p>这份PPT为学生提供了大型语言模型的全面介绍，包括它们的定义、与传统机器学习和深度学习的比较、在自然语言处理任务中的应用、不同LLMs的架构和性能比较，以及这些模型的潜在限制和社会影响。通过这些笔记，学生可以更好地理解</p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="07.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Lecture7</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="09.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Lecture9</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#llm">大型语言模型（LLM）概述</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">LLM与传统机器学习、深度学习的比较</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">自然语言处理任务</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#t5">T5框架</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">T5性能和架构变体</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">T5输入数据</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">T5训练</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">T5无监督目标</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">T5预训练数据集</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">T5性能结果</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">T5扩展</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">T5反思</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">上下文学习</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">语言模型元学习</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gpt-3">GPT-3架构和训练方法</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">GPT-3训练数据集</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">GPT-3计算消耗</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">GPT-3限制</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#codex">CodeX介绍</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">CodeX评估</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">CodeX训练</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">CodeX结果</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">CodeX比较</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#codex-s">CodeX-S</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#codex-d">CodeX-D</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">CodeX限制</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#llama-2">Llama-2介绍</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Llama-2预训练</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Llama-2预训练评估</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#llama-2-chat">Llama 2-Chat</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Llama 2-Chat人类偏好数据收集</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Llama 2-Chat奖励建模</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Llama 2-Chat迭代微调</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#llama-2-chat-ghost-attention-gatt">Llama 2-Chat Ghost Attention (GAtt)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#llama-2-chat-rlhf">Llama 2-Chat RLHF模型评估</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">Llama-2安全性</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mixtral-of-experts-moe">Mixtral of Experts (MoE)介绍</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mistral">Mistral架构</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mixtral-of-experts">稀疏Mixtral of Experts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mixtral">Mixtral结果</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mixtral-instruct">Mixtral-Instruct</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">Mixtral路由分析</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#palm-pathways-language-model">PaLM: Pathways Language Model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#palm">PaLM模型架构</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">PaLM模型规模超参数</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">PaLM训练数据集</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">PaLM训练基础设施</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">PaLM结果</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#palm-big-bench">PaLM: BIG-bench</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">PaLM: 评估推理</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id33">PaLM: 链式思维提示</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id34">PaLM: 链式思维结果</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id35">PaLM: 代码任务</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id36">PaLM: 翻译</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id37">PaLM: 限制</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#llms">LLMs比较</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id38">问题/讨论</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id39">参考文献</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By isLinXu
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022, isLinXu.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

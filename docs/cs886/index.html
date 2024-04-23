@@ -1,0 +1,922 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>cs886 &#8212; 课程学习笔记</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css?v=7f9a90b1" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=40d2fe7a"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cs886/index';</script>
+    <link rel="icon" href="../_static/panda.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Lecture1" href="01.html" />
+    <link rel="prev" title="Lecture12" href="../cs329/12.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="课程学习笔记 - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="课程学习笔记 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">目录</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Deep-Learning-Cousera/index.html">Deep-Learning-Cousera</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Deep-Learning-Cousera/courese_list_en.html">course-list-en</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Deep-Learning-Cousera/courese_list_zh.html">course-list-zh</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../C%26C%2B%2B/index.html">C/C++：从基础语法到优化策略</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/1.Introduction.html">1.Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/2.Getting-Started.html">2.Getting-Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/3.Data-Types-and-Arithmetic-Operators.html">3.Data-Types-and-Arithmetic-Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/4.Loops-and-Branching-Statements.html">4.Loops-and-Branching-Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/5.Data-Structures.html">5.Data-Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/6.Memory-and-Pointer.html">6.Memory-and-Pointer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/7.Basics-of-Functions.html">7.Basics-of-Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/8.Advances-in-Functions.html">8.Advances-in-Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/9.Speedup-Your-Program.html">9.Speedup-Your-Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/10.Code-Optimization.html">10.Code-Optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/11.Basics-of-Classes.html">11.Basics-of-Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/12.Advances-in-Classes.html">12.Advances-in-Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/13.Dynamic-Memory-Management-in-Classes.html">13.Dynamic-Memory-Management-in-Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/14.Class-Inheritance.html">14.Class-Inheritance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/15.Class-Templates-and-std-Library.html">15.Class-Templates-and-std-Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/16.Error-Handling.html">16.Error-Handling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/17.Nested-Classes-and-RTTI.html">17.Nested-Classes-and-RTTI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/18.Interview-with-Vadim-Pisarevsky-on-class-cv-MatinOpenCV.html">18.Interview-with-Vadim-Pisarevsky-on-class-cv-MatinOpenCV</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../cs25/index.html">cs25</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cs25/01.html">Lecture1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs25/02.html">Lecture2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs25/03.html">Lecture3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs25/04.html">Lecture4</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../cs197/index.html">cs197</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/01.html">Lecture1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/02.html">Lecture2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/03.html">Lecture3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/04.html">Lecture4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/05.html">Lecture5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/06.html">Lecture6&amp;7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/07.html">Lecture8&amp;9</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/08.html">Lecture10&amp;11</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/09.html">Lecture12&amp;13</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/10.html">Lecture14&amp;15</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/11.html">Lecture16&amp;17</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/12.html">Lecture18</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/13.html">Lecture19</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/14.html">Lecture20</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/15.html">Lecture21</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../cs329/index.html">cs329</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/01.html">Lecture1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/02.html">Lecture2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/03.html">Lecture3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/04.html">Lecture4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/05.html">Lecture5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/06.html">Lecture6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/07.html">Lecture7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/08.html">Lecture8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/09.html">Lecture9</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/10.html">Lecture10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/11.html">Lecture11</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs329/12.html">Lecture12</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">cs886</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="01.html">Lecture1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02.html">Lecture2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03.html">Lecture3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.html">Lecture4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.html">Lecture5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06.html">Lecture6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07.html">Lecture7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html">Lecture8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09.html">Lecture9</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html">Lecture10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html">Lecture11</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html">Lecture12</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/isLinXu/awesome-course-notes" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/isLinXu/awesome-course-notes/edit/main/cs886/index.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/isLinXu/awesome-course-notes/issues/new?title=Issue%20on%20page%20%2Fcs886/index.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/cs886/index.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>cs886</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="cs886">
+<h1>cs886<a class="headerlink" href="#cs886" title="Link to this heading">#</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="01.html">Lecture1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="01.html#id1">课程概览</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01.html#id2">讲师简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01.html#id3">深度学习历史</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01.html#id4">专业深度学习参数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01.html#id5">专业深度学习的优缺点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01.html#id6">迁移学习</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01.html#id7">迁移学习在词向量和视觉模型中的应用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01.html#id8">迁移深度学习参数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01.html#id9">迁移深度学习的优缺点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01.html#transformer">Transformer模型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01.html#gpt-2gpt-3">GPT-2和GPT-3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01.html#in-context-learningfew-shot-learning">In-context Learning和Few-shot Learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01.html#emergent-ability">Emergent Ability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01.html#diffusion-models">Diffusion Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01.html#gemini">Gemini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01.html#id10">基础深度学习参数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01.html#id11">课程行政细节</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01.html#id12">课程项目</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01.html#id13">课程大纲</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01.html#id14">圆桌介绍和主题分配</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01.html#id15">讨论阶段</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="02.html">Lecture2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="02.html#id1">课程内容概览</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02.html#rnn">循环神经网络（RNN）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02.html#cnn">卷积神经网络（CNN）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02.html#id2">CNN下游应用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02.html#id3">总结</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="03.html">Lecture3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="03.html#nlp">NLP 背景</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03.html#id1">NLP 任务</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03.html#id2">NLP 重要性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03.html#id3">序列到序列学习</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03.html#rnn-lstm">RNN 和 LSTM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03.html#id4">序列到序列模型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03.html#id5">数据转换</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03.html#id6">翻译任务</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03.html#id7">模型分析和训练细节</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03.html#id8">情感分类</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03.html#id9">电影评论领域的实验</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03.html#id10">人类直觉测试</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03.html#id11">实验结果</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03.html#id12">教机器阅读和理解</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03.html#id13">基线模型和深度学习模型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03.html#id14">传统NLP方法和神经网络模型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03.html#id15">神经注意模型在摘要句生成中的应用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03.html#id16">计算机视觉部分</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03.html#id17">计算机视觉任务</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03.html#id18">计算机视觉应用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03.html#id19">数据集和架构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03.html#id20">计算机视觉发展</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03.html#id21">讨论和反馈</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03.html#id22">参考文献</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="04.html">Lecture4</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="04.html#id1">自注意力和变换器概述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.html#id2">注意力机制的背景</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.html#id3">学习注意力机制</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.html#id4">序列到序列学习</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.html#rnn">RNN和注意力结合</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.html#id5">图像字幕生成与视觉注意力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.html#attention-is-all-you-need">注意力就是一切（Attention Is All You Need）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.html#id6">变换器架构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.html#id7">变换器的误解</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.html#id8">多头注意力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.html#id9">变换器架构详解</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.html#id10">变换器的组装</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.html#id11">变换器的训练</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.html#id12">变换器的影响</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.html#id13">图像变换器和视觉变换器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.html#id14">讨论</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.html#id15">附录</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="05.html">Lecture5</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="05.html#id1">高效变换器概述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.html#id2">注意力机制回顾</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.html#id3">传统变换器的计算和空间复杂度</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.html#id4">提出的解决方案</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.html#id5">稀疏变换器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.html#linformer">Linformer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.html#id6">线性化注意力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.html#longformer">Longformer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.html#rfa">随机特征注意力（RFA）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.html#id7">高效变换器比较</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.html#mamba">状态空间模型和Mamba介绍</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.html#id8">Mamba的优势和架构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.html#id9">实验评估</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.html#id10">总结</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="06.html">Lecture6</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="06.html#id1">参数高效变换器概述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06.html#transfer-learning">转移学习（Transfer Learning）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06.html#adapter-tuning">适配器调整（Adapter Tuning）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06.html#id2">实验和结果</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06.html#lora">LoRA（低秩适应大型语言模型）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06.html#id3">实验和结果</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06.html#id4">小型语言模型也是少样本学习者</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06.html#id5">实验和结果</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06.html#id6">使预训练语言模型更好地进行少样本学习</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06.html#id7">实验和评估</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06.html#id8">代码资源</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06.html#prefix-tuning">前缀调整（Prefix-Tuning）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06.html#prompt-tuning">提示调整（Prompt-Tuning）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06.html#id9">提示长度</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06.html#in-context-learning-icl">参数高效微调与上下文学习（In-Context Learning, ICL）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06.html#id10">参数高效微调的统一视角</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06.html#id11">实验评估</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06.html#id12">结合最佳设计元素</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06.html#peft">PEFT的使用时机</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06.html#id13">🤗 PEFT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06.html#id14">结语</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="07.html">Lecture7</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="07.html#id1">语言模型预训练概述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07.html#id2">为什么需要预训练</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07.html#id3">预训练模型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07.html#id4">预训练模型的应用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07.html#id5">预训练模型的问题</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07.html#id6">下一个词预测</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07.html#elmo">ELMo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07.html#bert">BERT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07.html#id7">输入表示</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07.html#id8">BERT的变种</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07.html#id9">统一语言模型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07.html#id10">预训练如何帮助</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07.html#id11">结论</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="08.html">Lecture8</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="08.html#llm">大型语言模型（LLM）概述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id1">LLM与传统机器学习、深度学习的比较</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id2">自然语言处理任务</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#t5">T5框架</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id3">T5性能和架构变体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id4">T5输入数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id5">T5训练</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id6">T5无监督目标</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id7">T5预训练数据集</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id8">T5性能结果</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id9">T5扩展</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id10">T5反思</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id11">上下文学习</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id12">语言模型元学习</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#gpt-3">GPT-3架构和训练方法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id13">GPT-3训练数据集</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id14">GPT-3计算消耗</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id15">GPT-3限制</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#codex">CodeX介绍</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id16">CodeX评估</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id17">CodeX训练</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id18">CodeX结果</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id19">CodeX比较</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#codex-s">CodeX-S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#codex-d">CodeX-D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id20">CodeX限制</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#llama-2">Llama-2介绍</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id21">Llama-2预训练</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id22">Llama-2预训练评估</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#llama-2-chat">Llama 2-Chat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id23">Llama 2-Chat人类偏好数据收集</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id24">Llama 2-Chat奖励建模</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id25">Llama 2-Chat迭代微调</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#llama-2-chat-ghost-attention-gatt">Llama 2-Chat Ghost Attention (GAtt)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#llama-2-chat-rlhf">Llama 2-Chat RLHF模型评估</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id26">Llama-2安全性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#mixtral-of-experts-moe">Mixtral of Experts (MoE)介绍</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#mistral">Mistral架构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#mixtral-of-experts">稀疏Mixtral of Experts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#mixtral">Mixtral结果</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#mixtral-instruct">Mixtral-Instruct</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id27">Mixtral路由分析</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#palm-pathways-language-model">PaLM: Pathways Language Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#palm">PaLM模型架构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id28">PaLM模型规模超参数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id29">PaLM训练数据集</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id30">PaLM训练基础设施</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id31">PaLM结果</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#palm-big-bench">PaLM: BIG-bench</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id32">PaLM: 评估推理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id33">PaLM: 链式思维提示</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id34">PaLM: 链式思维结果</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id35">PaLM: 代码任务</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id36">PaLM: 翻译</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id37">PaLM: 限制</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#llms">LLMs比较</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id38">问题/讨论</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id39">参考文献</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="09.html">Lecture9</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="09.html#scaling-laws">扩展法则（Scaling Laws）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09.html#kaplan-et-al-2020">Kaplan et al., 2020</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09.html#id1">Kaplan et al., 2020 - 主要结果</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09.html#id2">Kaplan et al., 2020 - 结论</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09.html#kaplan-et-al-2021">Kaplan et al., 2021 - 迁移学习的扩展法则</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09.html#id3">Kaplan et al., 2021 - 主要结果</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09.html#hutter-2021">Hutter, 2021 - 学习曲线理论</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09.html#hoffman-et-al-2022">Hoffman et al., 2022 - 训练计算最优的大型语言模型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09.html#id4">Hoffman et al., 2022 - 主要结果</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09.html#emergent-abilities">Emergent Abilities（突现能力）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09.html#schaeffer-et-al-2023">Schaeffer et al., 2023 - 突现能力的幻觉</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09.html#id5">Schaeffer et al., 2023 - 主要结果</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09.html#complicating-scaling-laws">Complicating Scaling Laws（复杂的扩展法则）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09.html#tay-et-al-2022-0-1">Tay et al., 2022 - 通过额外0.1%的计算超越扩展法则</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09.html#tay-et-al-2022">Tay et al., 2022 - 结果</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09.html#id6">Tay et al., 2022 - 结论</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="10.html">Lecture10</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="10.html#id1">动机</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#id2">常见解决方案</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#id3">提高性能的零样本学习</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#id4">指令调整</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#id5">指令调整示例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#flan-finetuned-language-models-are-zero-shot-learners">FLAN（Finetuned Language Models Are Zero-shot Learners）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#id6">分类与生成任务</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#id7">训练细节：基础模型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#flan">FLAN训练细节</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#id8">零样本结果</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#flan-vs-gpt-3">FLAN vs GPT-3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#t0">T0概述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#id9">数据集准备</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#t0-vs-gpt-3">T0 vs GPT-3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#t0-vs-flan">T0 vs FLAN差异</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#lima-less-is-more-for-alignment">LIMA（Less Is More for Alignment）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#lima">LIMA数据选择</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#id10">LIMA训练</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#id11">评估方法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#id12">人类评估</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#rlhf-reinforcement-learning-from-human-feedback">RLHF（Reinforcement Learning from Human Feedback）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#rlhf">RLHF动机</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#instructgpt">InstructGPT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#id13">强化学习背景</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#ppo-proximal-policy-optimization">PPO（Proximal Policy Optimization）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#id14">InstructGPT训练</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#id15">评估细节</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#id16">人类评估各种模型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#id17">InstructGPT局限性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#id18">RLHF问题</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#dpo-direct-preference-optimization">DPO（Direct Preference Optimization）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#dpo">DPO推导</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#id19">DPO性能</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#zephyr">Zephyr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#id20">Zephyr训练步骤</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#id21">Zephyr评估</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#id22">要点总结</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="11.html">Lecture11</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="11.html#llm">高效LLM推理概述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id1">预备论文</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#lm">标准LM推理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id2">“过度思考”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id3">高效LM推理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#shallow-deep-networks-branchynet">Shallow-Deep Networks | BranchyNet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id4">明显的缺陷</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#pabee">耐心基早期退出（PABEE）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id5">PABEE的准确性和速度</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id6">准确性提升？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id7">防御对抗性攻击</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id8">局限性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id9">自信的自适应语言模型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id10">早期退出的影响</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id11">状态传播预言机</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id12">对局部错误的敏感性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id13">处理早期局部错误</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id14">衰减阈值</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id15">局部置信度度量</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id16">原则性方法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id17">全局约束</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id18">校准早期退出</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id19">性能-效率权衡</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id20">执行示例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id21">局限性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id22">推测性解码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id23">推测性执行</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id24">错误的推测</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id25">纠正路径</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id26">推测性采样</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id27">关键观察</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id28">权衡</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id29">墙时改进</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id30">选择最优γ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id31">加速</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id32">局限性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#llms">高效LLMs是全栈问题</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id33">LLM基于应用的兴起</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id34">常规推理的分解</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#kv">管理KV缓存</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id35">按需内存</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id36">多请求</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id37">解码技术 - 共享KV块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id38">束搜索 - 派生、追加和释放</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id39">分页注意力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id40">结果</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#flash-attention">Flash-Attention（重新访问）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#flash-decoding-pytorch">Flash-Decoding（PyTorch）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#codellama-34b">基准测试 - CodeLLama 34B</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id41">预期解码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id42">雅可比迭代</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id43">我们可以做得更好吗？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id44">预期！</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#gpu">减少延迟！（单GPU结果）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id45">总结</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id46">讨论！</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="12.html">Lecture12</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id1">稀疏化简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id2">传统变换器架构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id3">瓶颈问题</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#moe">混合专家（MoE）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id4">为什么使用MoE？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id5">路由机制</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id6">MoE的效率</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id7">实验</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id8">预训练</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id9">评估语言模型：困惑度和性能</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id10">结果</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id11">扩展规模</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#gshard">GShard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id12">GShard架构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id13">实施GShard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#xla">XLA编译器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id14">数据集和基线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id15">模型变体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id16">结果</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id17">训练效率</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id18">性能</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id19">内存消耗</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id20">GShard关键要点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#colt5-t5">CoLT5：条件长T5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#colt5">CoLT5直觉</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id21">架构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id22">CoLT5条件计算</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id23">实验：训练</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id24">实验：数据集</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id25">结果</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id26">缩放至极长输入</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id27">消融研究</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id28">限制</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id29">比较</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id30">量化大型语言模型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id31">研究论文</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#llm-int8">LLM.int8()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id32">矩阵乘法：前馈层和注意力层</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id33">8位量化：混合精度量化和向量量化</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id34">LLM.int8()结果</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id35">8位优化器通过块量化</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#qlora-llm">QLoRA：量化LLM的高效微调</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#bitnet-1">BitNet：为大型语言模型扩展1位变换器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#bitnet">BitNet关键创新</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#bitnet-bitlinear">BitNet：BitLinear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id36">BitNet：模型训练</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id37">BitNet：能耗</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id38">BitNet：下游任务结果</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#bitnet-fp16">BitNet：与FP16变换器的比较</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id39">BitNet：关键要点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id40">量化比较表</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../cs329/12.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Lecture12</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="01.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Lecture1</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By isLinXu
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022, isLinXu.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

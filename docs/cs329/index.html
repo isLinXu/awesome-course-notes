@@ -1,0 +1,738 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>cs329 &#8212; 课程学习笔记</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css?v=7f9a90b1" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=40d2fe7a"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cs329/index';</script>
+    <link rel="icon" href="../_static/panda.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Lecture1" href="01.html" />
+    <link rel="prev" title="Lecture21" href="../cs197/15.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="课程学习笔记 - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="课程学习笔记 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">目录</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Deep-Learning-Cousera/index.html">Deep-Learning-Cousera</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Deep-Learning-Cousera/courese_list_en.html">course-list-en</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Deep-Learning-Cousera/courese_list_zh.html">course-list-zh</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../C%26C%2B%2B/index.html">C/C++：从基础语法到优化策略</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/1.Introduction.html">1.Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/2.Getting-Started.html">2.Getting-Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/3.Data-Types-and-Arithmetic-Operators.html">3.Data-Types-and-Arithmetic-Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/4.Loops-and-Branching-Statements.html">4.Loops-and-Branching-Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/5.Data-Structures.html">5.Data-Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/6.Memory-and-Pointer.html">6.Memory-and-Pointer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/7.Basics-of-Functions.html">7.Basics-of-Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/8.Advances-in-Functions.html">8.Advances-in-Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/9.Speedup-Your-Program.html">9.Speedup-Your-Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/10.Code-Optimization.html">10.Code-Optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/11.Basics-of-Classes.html">11.Basics-of-Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/12.Advances-in-Classes.html">12.Advances-in-Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/13.Dynamic-Memory-Management-in-Classes.html">13.Dynamic-Memory-Management-in-Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/14.Class-Inheritance.html">14.Class-Inheritance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/15.Class-Templates-and-std-Library.html">15.Class-Templates-and-std-Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/16.Error-Handling.html">16.Error-Handling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/17.Nested-Classes-and-RTTI.html">17.Nested-Classes-and-RTTI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../C%26C%2B%2B/18.Interview-with-Vadim-Pisarevsky-on-class-cv-MatinOpenCV.html">18.Interview-with-Vadim-Pisarevsky-on-class-cv-MatinOpenCV</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../cs25/index.html">cs25</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cs25/01.html">Lecture1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs25/02.html">Lecture2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs25/03.html">Lecture3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs25/04.html">Lecture4</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../cs197/index.html">cs197</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/01.html">Lecture1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/02.html">Lecture2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/03.html">Lecture3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/04.html">Lecture4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/05.html">Lecture5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/06.html">Lecture6&amp;7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/07.html">Lecture8&amp;9</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/08.html">Lecture10&amp;11</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/09.html">Lecture12&amp;13</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/10.html">Lecture14&amp;15</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/11.html">Lecture16&amp;17</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/12.html">Lecture18</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/13.html">Lecture19</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/14.html">Lecture20</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cs197/15.html">Lecture21</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">cs329</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="01.html">Lecture1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02.html">Lecture2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03.html">Lecture3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.html">Lecture4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.html">Lecture5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06.html">Lecture6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07.html">Lecture7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html">Lecture8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09.html">Lecture9</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html">Lecture10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html">Lecture11</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html">Lecture12</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/isLinXu/awesome-course-notes" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/isLinXu/awesome-course-notes/edit/main/cs329/index.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/isLinXu/awesome-course-notes/issues/new?title=Issue%20on%20page%20%2Fcs329/index.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/cs329/index.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>cs329</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="cs329">
+<h1>cs329<a class="headerlink" href="#cs329" title="Link to this heading">#</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="01.html">Lecture1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="01.html#id1">课程概览</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01.html#id2">课程物流</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01.html#id3">讲师信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01.html#id4">课程目标</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01.html#id5">课程组织</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01.html#id6">课程项目</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01.html#llm">LLM革命</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01.html#id7">LLM的挑战</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01.html#id8">信任度量维度</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01.html#id9">LLM功能和训练</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01.html#id10">LLM能力示例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01.html#id11">LLM的局限性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01.html#id12">信任度量维度</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01.html#id13">课程详细概览</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01.html#id14">课程项目</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01.html#id15">讨论</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01.html#id16">背景总结</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01.html#id17">课程人员</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="02.html">Lecture2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="02.html#llm">1. LLM应用开发</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02.html#llamaindex">2. LlamaIndex介绍</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02.html#id1">3. LLM的一般化与记忆</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02.html#rags-retrieval-augmented-generators">4. RAGs（Retrieval-Augmented Generators）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02.html#trulens">5. TruLens工具</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02.html#id2">6. 实践和演示</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02.html#rags">7. 避免幻觉的RAGs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02.html#id3">8. 附加材料</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02.html#id4">课程笔记总结</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="03.html">Lecture3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="03.html#id1">1. 教育领域的应用案例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03.html#id2">2. 信任度的维度</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03.html#id3">3. 未来的梦想</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03.html#id4">4. 安全扩展编程风格反馈</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03.html#gpt">5. 基于GPT的教师培训</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03.html#ai">6. AI生成的教学案例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03.html#metagpt">7. MetaGPT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03.html#id5">8. 价值类型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03.html#id6">9. 教育中的信任问题</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03.html#id7">10. 其他项目示例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03.html#id8">课程笔记总结</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="04.html">Lecture4</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="04.html#id1">1. 课程回顾</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.html#id2">2. 信任度的维度</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.html#id3">3. 当天讲座内容</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.html#llms">4. LLMs的安全性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.html#id4">5. 讲座部分详解</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="04.html#id5">第一部分：LLMs用于安全</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04.html#id6">第二部分：LLMs的安全性</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="04.html#id7">课程笔记总结</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="05.html">Lecture5</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="05.html#ehrs">1. 电子健康记录（EHRs）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.html#id1">2. 变量和挑战</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.html#id2">3. 临床文本解读</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.html#id3">4. 信息提取的现状</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.html#id4">5. 信息提取的其他用途</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.html#ml">6. 可信ML在医疗保健中的重要性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.html#llm">7. 大型语言模型（LLM）在临床文本中的应用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.html#id5">8. 面临的挑战</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.html#id6">9. 鼓励引用结构化输出</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.html#id7">10. 部署性问题</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.html#id8">11. 将LLM输出视为弱标签</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.html#id9">12. 临床缩写的歧义消解</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.html#id10">13. 药物信息解析示例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.html#id11">14. 文档重构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.html#id12">15. EHRs的可用性问题</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.html#id13">16. 解决方案</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.html#id14">17. 部署和评估</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.html#ehr">18. 利用EHR审计日志</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.html#ai">19. 人机AI团队在临床注释中的应用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.html#id15">20. 人机AI团队的启示</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.html#id16">课程笔记总结</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="06.html">Lecture6</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="06.html#id1">1. 课程回顾</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06.html#llm-for-x">2. “LLM for X”项目的关键步骤</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06.html#id2">3. 项目示例：改进作业评分</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06.html#id3">4. 项目示例：总结医生笔记</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06.html#id4">5. 可靠性和可信度的更多信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06.html#id5">6. 教育项目方向示例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06.html#id6">7. 安全项目方向示例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06.html#id7">8. 医疗保健项目方向示例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06.html#id8">9. 数据集建议</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06.html#id9">10. 学生兴趣和前瞻性思考</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06.html#id10">课程笔记总结</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="07.html">Lecture7</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="07.html#llm">1. LLM的挑战</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07.html#grounding">2. 基础性（Grounding）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07.html#id1">3. 支持基础性响应</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07.html#id2">4. 验证响应的基础性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07.html#id3">5. 响应选择和重写</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07.html#id4">6. 自我一致性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07.html#id5">7. 回应验证</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07.html#id6">8. 回应验证的工作流程</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07.html#id7">9. 回应验证的挑战</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07.html#id8">10. 回应验证的改进</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07.html#id9">11. 回应选择</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07.html#id10">12. 回应修订</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07.html#id11">课程笔记总结</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="08.html">Lecture8</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="08.html#llm">1. LLM的事实性问题</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#transformer">2. Transformer概述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id1">3. 事实性的希望</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id2">4. 解码陈述的真实性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id3">5. 模型置信度与真实性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id4">6. 模型不确定性与真实性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id5">7. 提高LLM的事实性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#rlhf">8. RLHF训练过程</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id6">9. 自动化事实性排名</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id7">10. 事实性调整的效果</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id8">11. 结论</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.html#id9">课程笔记总结</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="09.html">Lecture9</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="09.html#id1">1. 动机</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09.html#llm">2. 解释LLM行为的方法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09.html#id2">3. 影响函数的概念</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09.html#id3">4. 影响函数的挑战</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09.html#id4">5. 影响函数的可扩展性解决方案</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09.html#id5">6. 影响函数的准确性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09.html#id6">7. LLM中的影响函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09.html#id7">8. 数据过滤和查询批处理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09.html#id8">9. 影响分布</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09.html#id9">10. 跨语言泛化</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09.html#id10">11. 定位到层和令牌</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09.html#id11">12. 词序问题</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09.html#id12">13. 未来方向</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09.html#id13">课程笔记总结</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="10.html">Lecture10</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="10.html#id1">1. 概览</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#llms">2. LLMs的事实性问题</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#transformers">3. Transformers概述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#id2">4. 提高LLMs的事实性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#id3">5. LLMs是否能够编码事实性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#id4">6. 解码语句的真实性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#id5">7. 模型置信度与事实性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#id6">8. 模型不确定性与事实性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#id7">9. 训练LLMs以提高事实性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#id8">10. 训练LLMs的具体方法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#id9">11. 结论</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10.html#id10">12. 联系方式</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="11.html">Lecture11</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id1">1. 动机</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id2">2. 解释方法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#influence-functions">3. 影响函数（Influence Functions）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id3">4. 影响函数的挑战</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#kronecker-factored-approximate-curvature-k-fac">5. Kronecker-Factored Approximate Curvature (K-FAC)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id4">6. 影响函数的准确性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#llms">7. LLMs的影响函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id5">8. 数据过滤和查询批处理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id6">9. 影响分布</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id7">10. 跨语言泛化</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id8">11. 定位到层和令牌</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id9">12. 词序问题</a></li>
+<li class="toctree-l2"><a class="reference internal" href="11.html#id10">13. 未来方向</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="12.html">Lecture12</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id1">1. 引言</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id2">2. 机器学习模型的评估</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id3">3. 测试准确性的问题</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id4">4. 解释模型预测</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id5">5. 特征归因</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id6">6. 归因的简单方法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#integrated-gradients">7. 集成梯度（Integrated Gradients）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id7">8. 集成梯度的应用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id8">9. 内部影响</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id9">10. 影响路径和模式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#what-if">11. What-If探索</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id10">12. 目标What-If技术</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#llm">13. LLM应用想法：提示扰动</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id11">14. 总结</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id12">15. 调试工作流程</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id13">16. 人类分析师的作用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id14">17. 可视化的重要性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id15">18. 特征归因的局限性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id16">19. 评估集成梯度</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12.html#id17">20. 集成梯度的公理化证明</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../cs197/15.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Lecture21</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="01.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Lecture1</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By isLinXu
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022, isLinXu.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
